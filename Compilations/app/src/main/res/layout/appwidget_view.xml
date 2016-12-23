@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ll_processinfo"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp">
+
+        <TextView
+            android:id="@+id/tv_runprocessnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="正在运行软件:14"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/tv_avalimem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="可用内存:300.52MB"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机安全卫士"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_killall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:text="一键清理"
+            android:textColor="@color/function_greenbutton_textcolor_selector"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

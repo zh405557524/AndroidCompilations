@@ -1,4 +1,4 @@
-package com.soul.androidcompilptions.customview;
+package com.soul.androidcompilptions.customview.sticky;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -93,7 +93,6 @@ public class SimpleViewPagerIndicator extends LinearLayout {
     @Override
     protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
-
         canvas.save();
         canvas.translate(mTranslationX, getHeight() - 2);
         canvas.drawLine(0, 0, mTabWidth, 0, mPaint);

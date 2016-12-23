@@ -1,4 +1,4 @@
-package com.soul.androidcompilptions.customview;
+package com.soul.androidcompilptions.customview.sticky;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -27,7 +27,7 @@ public class StickyNavActivity extends AppCompatActivity {
 
     private void initView() {
         mIndicator = (SimpleViewPagerIndicator) findViewById(R.id.id_stickynavlayout_indicator);
-        mViewPage = (ViewPager) findViewById(R.id.id_stickynavalyout_viewpager);
+        mViewPage = (ViewPager) findViewById(R.id.id_stickynavlayout_viewpager);
 
     }
 

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_custom_image"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.soul.androidcompilptions.customview.customImageview.CustomImageActivity"
+    >
+
+    <com.soul.androidcompilptions.customview.customImageview.CustomTitleViw
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:visibility="gone"
+        custom:titleText="3712"
+        custom:titleTextColor="#ff0000"
+        custom:titleTextSize="40sp">
+    </com.soul.androidcompilptions.customview.customImageview.CustomTitleViw>
+
+    <com.soul.androidcompilptions.customview.customImageview.CustomImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        custom:image="@mipmap/ic_launcher"
+        custom:imageScaleType="center"
+        custom:titleText="fsdafdsafdjhkkjka"
+        custom:titleTextColor="#ff0000"
+        custom:titleTextSize="30sp"
+        >
+
+    </com.soul.androidcompilptions.customview.customImageview.CustomImageView>
+
+    <com.soul.androidcompilptions.customview.customImageview.CustomProgressBar
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        custom:circleWidth="50dp"
+        custom:firstColor="#5a9f57"
+        custom:secondColor="#af4444"
+        >
+
+    </com.soul.androidcompilptions.customview.customImageview.CustomProgressBar>
+
+    <com.soul.androidcompilptions.customview.customImageview.CustomVolumControlBar
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        custom:bg="@mipmap/ic_launcher"
+        custom:circleWidth="10dp"
+        custom:firstColor="#5a9f57"
+        custom:secondColor="#af4444">
+    </com.soul.androidcompilptions.customview.customImageview.CustomVolumControlBar>
+
+    <com.soul.androidcompilptions.customview.customImageview.CustomImgContainer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#ff4444"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00ff00"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#ff0000"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#0000ff"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+
+    </com.soul.androidcompilptions.customview.customImageview.CustomImgContainer>
+
+    <com.soul.androidcompilptions.customview.customImageview.CanvasDemoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        >
+
+    </com.soul.androidcompilptions.customview.customImageview.CanvasDemoView>
+
+
+    <com.soul.androidcompilptions.customview.customImageview.PieView
+        android:id="@+id/pieview"
+        android:visibility="gone"
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+
+    </com.soul.androidcompilptions.customview.customImageview.PieView>
+
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package com.soul.androidcompilptions.customview;
+package com.soul.androidcompilptions.customview.sticky;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -48,8 +48,21 @@ public class TabFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_tab, container, false);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.id_stickynavlayout_innerscrollview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        for (int i = 0; i < 50; i++) {
-            mDatas.add(mTitle + "-> " + i);
+
+        mDatas.add("\u25f7");
+        for (int i = 0; i < 100; i++) {
+            char[] chars = new char[6];
+            chars[0] = '\\';
+            chars[1] = 'u';
+            chars[2] = '2';
+            chars[3] = '3';
+            chars[4] = 'F';
+            String s = i + "";
+            char[] chars1 = s.toCharArray();
+            chars[5] = chars1[0];
+
+            String s1 = String.valueOf(chars);
+            mDatas.add(s1);
         }
         mRecyclerView.setAdapter(new CommonAdapter<String>(getActivity(), R.layout.item, mDatas) {
             @Override
@@ -59,7 +72,6 @@ public class TabFragment extends Fragment {
         });
         return view;
     }
-
 
     public static TabFragment newInstance(String title) {
         TabFragment tabFragment = new TabFragment();

@@ -2,6 +2,14 @@
 <manifest package="com.soul.androidcompilptions"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,17 +17,49 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+        </activity>
+        <activity
+            android:name=".customview.sticky.StickyNavActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".customview.gridlayout.GridLayoutActivity">
+        </activity>
+        <activity android:name=".customview.customImageview.CustomImageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
+
         </activity>
-        <activity
-            android:name=".customview.StickyNavActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            >
+        <activity android:name=".customview.popupwindow.PopupWindowDemo">
         </activity>
+        <activity android:name=".customview.lineargradient.LinearGradientActivity">
+        </activity>
+        <activity android:name=".customview.dragfooterview.DragFooterActivity">
+        </activity>
+        <activity android:name=".customview.GetPackageActivity">
+        </activity>
+        <activity android:name=".customview.widget.WidgetDemoActivity">
+
+        </activity>
+
+        <receiver android:name=".customview.widget.Mywidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/myappwidget_info"/>
+        </receiver>
+
+        <service
+            android:name=".customview.widget.UpdateWidgetService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
     </application>
 
 </manifest>

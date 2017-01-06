@@ -25,12 +25,6 @@
         <activity android:name=".customview.gridlayout.GridLayoutActivity">
         </activity>
         <activity android:name=".customview.customImageview.CustomImageActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-
 
         </activity>
         <activity android:name=".customview.popupwindow.PopupWindowDemo">
@@ -42,7 +36,6 @@
         <activity android:name=".customview.GetPackageActivity">
         </activity>
         <activity android:name=".customview.widget.WidgetDemoActivity">
-
         </activity>
 
         <receiver android:name=".customview.widget.Mywidget">
@@ -60,6 +53,14 @@
             android:enabled="true"
             android:exported="true">
         </service>
+
+        <activity android:name=".customview.canvas_study.CanvasStudyActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

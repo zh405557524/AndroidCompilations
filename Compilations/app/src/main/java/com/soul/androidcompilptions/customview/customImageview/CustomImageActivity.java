@@ -21,6 +21,8 @@ public class CustomImageActivity extends AppCompatActivity {
         initView();
         initData();
 
+
+
     }
 
     private void initData() {
@@ -34,8 +36,6 @@ public class CustomImageActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        mPieView = (PieView) findViewById(R.id.pieview);
-
 
     }
 

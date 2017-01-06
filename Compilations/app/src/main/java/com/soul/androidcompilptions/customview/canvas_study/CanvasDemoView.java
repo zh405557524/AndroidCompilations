@@ -1,4 +1,4 @@
-package com.soul.androidcompilptions.customview.customImageview;
+package com.soul.androidcompilptions.customview.canvas_study;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -12,7 +12,6 @@ import android.view.View;
  * * @author soul
  *
  * @项目名:Compilations
- * @包名: com.soul.androidcompilptions.customview.customImageview
  * @作者：祝明
  * @描述：TODO
  * @创建时间：2016/12/5 9:34

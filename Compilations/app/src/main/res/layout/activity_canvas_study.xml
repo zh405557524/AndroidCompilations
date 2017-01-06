@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_canvas_study"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cutom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.soul.androidcompilptions.customview.canvas_study.CanvasStudyActivity">
+
+    <com.soul.androidcompilptions.customview.canvas_study.RatingStartView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        cutom:numStars="5"
+        cutom:rating="4.6"
+        cutom:spacing="2dp"/>
+
+</RelativeLayout>

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.soul.androidcompilptions.customview.canvas_study.CanvasStudyActivity;
 import com.soul.androidcompilptions.customview.customImageview.CustomImageActivity;
 import com.soul.androidcompilptions.customview.dragfooterview.DragFooterActivity;
 import com.soul.androidcompilptions.customview.gridlayout.GridLayoutActivity;
@@ -49,6 +50,7 @@ public class MainActivity extends ListActivity {
         putActivityName(myData, new Intent(MainActivity.this, LinearGradientActivity.class), " 线性渐变");
         putActivityName(myData, new Intent(MainActivity.this, DragFooterActivity.class), "带拖拽效果的DragContainer");
         putActivityName(myData, new Intent(MainActivity.this, WidgetDemoActivity.class), "widget的用法");
+        putActivityName(myData, new Intent(MainActivity.this, CanvasStudyActivity.class), "Canvas的用法");
         return myData;
     }
 

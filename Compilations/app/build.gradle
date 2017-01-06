@@ -29,5 +29,4 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.0.0'
     compile 'com.zhy:base-adapter:2.0.0'
     compile 'com.belerweb:pinyin4j:2.5.1'
-    compile project(':library')
 }

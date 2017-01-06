@@ -30,7 +30,7 @@
     </declare-styleable>
 
     <declare-styleable name="CustomImageView"
-        >
+    >
         <attr name="titleText"/>
         <attr name="titleTextSize"/>
         <attr name="titleTextColor"/>
@@ -52,6 +52,15 @@
         <attr name="dotCount"/>
         <attr name="splitSize"/>
         <attr name="bg"/>
+    </declare-styleable>
+    <!--
+       1 总数
+       2 评星
+    -->
+    <declare-styleable name="RatingStartView">
+        <attr name="numStars" format="float"/>
+        <attr name="rating" format="float"/>
+        <attr name="spacing" format="dimension"/>
     </declare-styleable>
 
 

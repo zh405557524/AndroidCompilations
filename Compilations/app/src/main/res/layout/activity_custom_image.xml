@@ -103,22 +103,12 @@
 
     </com.soul.androidcompilptions.customview.customImageview.CustomImgContainer>
 
-    <com.soul.androidcompilptions.customview.customImageview.CanvasDemoView
+    <com.soul.androidcompilptions.customview.canvas_study.CanvasDemoView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible"
         >
 
-    </com.soul.androidcompilptions.customview.customImageview.CanvasDemoView>
-
-
-    <com.soul.androidcompilptions.customview.customImageview.PieView
-        android:id="@+id/pieview"
-        android:visibility="gone"
-        android:layout_width="300dp"
-        android:layout_height="300dp">
-
-    </com.soul.androidcompilptions.customview.customImageview.PieView>
-
+    </com.soul.androidcompilptions.customview.canvas_study.CanvasDemoView>
 
 </RelativeLayout>

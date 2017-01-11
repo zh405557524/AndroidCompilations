@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+     1 总数
+     2 评星
+  -->
+    <declare-styleable name="RatingStartView">
+        <attr name="numStars" format="float"/>
+        <attr name="rating" format="float"/>
+        <attr name="spacing" format="dimension"/>
+    </declare-styleable>
+</resources>

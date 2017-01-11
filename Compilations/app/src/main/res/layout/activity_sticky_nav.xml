@@ -24,12 +24,12 @@
             />
     </RelativeLayout>
 
-    <com.soul.androidcompilptions.customview.sticky.SimpleViewPagerIndicator
+    <com.soul.library.widget.SimpleViewPagerIndicator
         android:id="@+id/id_stickynavlayout_indicator"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#ffffffff">
-    </com.soul.androidcompilptions.customview.sticky.SimpleViewPagerIndicator>
+    </com.soul.library.widget.SimpleViewPagerIndicator>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/id_stickynavlayout_viewpager"

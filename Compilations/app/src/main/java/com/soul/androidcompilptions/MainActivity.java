@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.soul.androidcompilptions.androidbase.AndroidBasedActivity;
 import com.soul.androidcompilptions.customview.canvas_study.CanvasStudyActivity;
 import com.soul.androidcompilptions.customview.customImageview.CustomImageActivity;
 import com.soul.androidcompilptions.customview.dragfooterview.DragFooterActivity;
@@ -15,6 +16,7 @@ import com.soul.androidcompilptions.customview.lineargradient.LinearGradientActi
 import com.soul.androidcompilptions.customview.popupwindow.PopupWindowDemo;
 import com.soul.androidcompilptions.customview.sticky.StickyNavActivity;
 import com.soul.androidcompilptions.customview.widget.WidgetDemoActivity;
+import com.soul.androidcompilptions.rxandretrofi.RxRetrofitActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -51,6 +53,8 @@ public class MainActivity extends ListActivity {
         putActivityName(myData, new Intent(MainActivity.this, DragFooterActivity.class), "带拖拽效果的DragContainer");
         putActivityName(myData, new Intent(MainActivity.this, WidgetDemoActivity.class), "widget的用法");
         putActivityName(myData, new Intent(MainActivity.this, CanvasStudyActivity.class), "Canvas的用法");
+        putActivityName(myData, new Intent(MainActivity.this, AndroidBasedActivity.class), " AndroidBased的用法");
+        putActivityName(myData, new Intent(MainActivity.this, RxRetrofitActivity.class), " RxRetrofit的用法");
         return myData;
     }
 

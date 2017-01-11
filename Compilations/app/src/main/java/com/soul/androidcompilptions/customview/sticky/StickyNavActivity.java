@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.soul.androidcompilptions.R;
+import com.soul.library.widget.SimpleViewPagerIndicator;
 
 public class StickyNavActivity extends AppCompatActivity {
     private SimpleViewPagerIndicator mIndicator;

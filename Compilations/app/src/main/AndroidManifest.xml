@@ -15,7 +15,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         <activity android:name=".MainActivity">
         </activity>
         <activity
@@ -57,12 +57,23 @@
         </activity>
         <activity android:name=".androidbase.AndroidBasedActivity">
         </activity>
-        <activity android:name=".rxandretrofi.RxRetrofitActivity">
+        <activity
+            android:name=".rxandretrofi.RxRetrofitActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".rxandretrofi.ui.GanKActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".rxandretrofi.ui.WebActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+
+        >
         </activity>
     </application>
 

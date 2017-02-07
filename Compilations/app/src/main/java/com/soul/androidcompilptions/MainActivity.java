@@ -63,8 +63,6 @@ public class MainActivity extends ListActivity {
         map.put("title", nickName);
         map.put("intent", intent);
         myData.add(map);
-
-
     }
 
 

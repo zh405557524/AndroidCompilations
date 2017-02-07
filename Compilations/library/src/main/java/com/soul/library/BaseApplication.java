@@ -7,6 +7,9 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Process;
 
+import com.litesuits.orm.LiteOrm;
+import com.soul.library.utils.Utils;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
@@ -15,7 +18,6 @@ import java.lang.reflect.Field;
 import java.util.Map;
 
 /**
- *
  * @作者：祝明
  * @描述：TODO
  * @创建时间：2015/12/14 20:34
@@ -26,6 +28,10 @@ public class BaseApplication extends Application {
     private static Handler mHandler;
     private static long mMainThreadId;
     private static Thread mMainThread;
+
+    private static final String DB_NAME = "gank.db";
+    public static LiteOrm sDb;
+
     public static Map<String, Long> map;
 
     public static Context getContext() {
@@ -60,6 +66,12 @@ public class BaseApplication extends Application {
         mMainThread = Thread.currentThread();
         //                registerException();
         super.onCreate();
+        Utils.init(this);
+
+        sDb = LiteOrm.newSingleInstance(this, DB_NAME);
+        if (BuildConfig.DEBUG) {
+            sDb.setDebugged(true);
+        }
     }
 
     private void registerException() {

@@ -141,12 +141,18 @@ public class RatingStartView extends View {
             }
             for (int x = 0; x < mRating; x++) {
                 if (mRating - x < 1 && mRating - x > 0) {
+                    // 指定图片绘制区域(左上角的四分之一)
                     Rect src = new Rect(0, 0, (int) ((mSelectedRating.getWidth() * (mRating - x))),
                             mSelectedRating.getHeight());
+                    // 指定图片在屏幕上显示的区域
                     Rect dst = new Rect(x * (mSelectedRating.getWidth() + mSpacing), 0,
                             (int) (mRating * mSelectedRating.getWidth() + x * mSpacing),
                             mSelectedRating.getHeight());
                     canvas.drawBitmap(mSelectedRating, src, dst, mPaint);
+
+
+
+
                 } else {
                     canvas.drawBitmap(mSelectedRating, x * (mSelectedRating.getWidth() + mSpacing),
                             0, mPaint);

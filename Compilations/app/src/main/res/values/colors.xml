@@ -7,5 +7,9 @@
     <color name="transparent">#0000</color>
     <color name="black">#391818</color>
     <color name="white">#ffffff</color>
+    <color name="white1">#eeffffff</color>
     <color name="function_greenbutton_textcolor_selector">#4cb2b0</color>
+    <color name="brightYellow">#ffeb3c</color>
+    <color name="theme_primary_darker">#2d1e1b</color>
+
 </resources>

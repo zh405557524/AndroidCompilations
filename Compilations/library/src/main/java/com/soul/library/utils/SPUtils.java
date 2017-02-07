@@ -13,11 +13,14 @@ import java.util.Map;
  *     desc  : SP相关工具类
  * </pre>
  */
-public class SPUtils {
+public class SPUtils{
 
     private SharedPreferences        sp;
     private SharedPreferences.Editor editor;
-
+    /**
+     * 保存在手机里面的文件名
+     */
+    public static final String FILE_NAME ="123";
     /**
      * SPUtils构造函数
      * <p>在Application中初始化</p>
@@ -219,4 +222,31 @@ public class SPUtils {
     public void clear() {
         editor.clear().apply();
     }
+
+
+    /**
+     * 得到保存数据的方法，我们根据默认值得到保存的数据的具体类型，然后调用相对于的方法获取值
+     *
+     * @param key
+     * @param defaultObject
+     * @return
+     */
+    public static Object get(String key, Object defaultObject) {
+        SharedPreferences sp = UIUtils.getContext().getSharedPreferences(FILE_NAME,
+                Context.MODE_PRIVATE);
+
+        if (defaultObject instanceof String) {
+            return sp.getString(key, (String) defaultObject);
+        } else if (defaultObject instanceof Integer) {
+            return sp.getInt(key, (Integer) defaultObject);
+        } else if (defaultObject instanceof Boolean) {
+            return sp.getBoolean(key, (Boolean) defaultObject);
+        } else if (defaultObject instanceof Float) {
+            return sp.getFloat(key, (Float) defaultObject);
+        } else if (defaultObject instanceof Long) {
+            return sp.getLong(key, (Long) defaultObject);
+        }
+        return null;
+    }
+
 }

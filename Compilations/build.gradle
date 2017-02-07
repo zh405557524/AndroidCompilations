@@ -2,13 +2,16 @@
 
 buildscript {
     repositories {
+        mavenCentral()
         jcenter()
         maven { url "https://jitpack.io" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.3'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
-        // NOTE: Do not place your application dependencies here; they belong
+        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        // NOTE: Do not place your application dependencies here; they  classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'belong
         // in the individual module build.gradle files
     }
 }

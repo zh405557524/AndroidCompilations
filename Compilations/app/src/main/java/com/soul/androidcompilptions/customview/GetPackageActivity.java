@@ -17,7 +17,6 @@ import com.soul.androidcompilptions.R;
 import java.util.List;
 
 public class GetPackageActivity extends Activity {
-
     private TextView mTvPackgeName;
     private WindowManager.LayoutParams mWindowLayoutPara;
     private WindowManager mWindowManager;

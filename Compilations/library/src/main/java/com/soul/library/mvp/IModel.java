@@ -11,4 +11,7 @@ package com.soul.library.mvp;
  */
 
 public class IModel {
+
+
+
 }

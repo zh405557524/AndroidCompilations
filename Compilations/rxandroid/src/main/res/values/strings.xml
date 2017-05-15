@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">RxAndroid</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_create">CreateAndRangeActivity</string>
+    <string name="title_activity_defer">DeferActivity</string>
+    <string name="title_activity_from">FromActivity</string>
+    <string name="title_activity_interval">IntervalActivity</string>
+    <string name="title_activity_repeat">RepeatActivity</string>
+    <string name="title_activity_buffer">BufferActivity</string>
+    <string name="title_activity_flat_map">FlatMapActivity</string>
+    <string name="title_activity_groupby">GroupbyActivity</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_scan">ScanActivity</string>
+    <string name="title_activity_window">WindowActivity</string>
+    <string name="title_activity_debounce">DebounceActivity</string>
+    <string name="title_activity_distinct">DistinctActivity</string>
+    <string name="title_activity_element_at_and_first">ElementAtAndFirstActivity</string>
+    <string name="title_activity_first">FirstActivity</string>
+    <string name="title_activity_skip_and_take">SkipAndTakeActivity</string>
+    <string name="title_activity_sample">SampleActivity</string>
+    <string name="title_activity_combine_latest">CombineLatestActivity</string>
+    <string name="title_activity_catch">CatchActivity</string>
+    <string name="title_activity_retry">RetryActivity</string>
+    <string name="title_activity_delay">DelayActivity</string>
+    <string name="title_activity_do">MeterializeActivity</string>
+    <string name="title_activity_meterialize">MeterializeActivity</string>
+    <string name="title_activity_subon">SubscribeOnAndObserverOnActivity</string>
+    <string name="title_activity_time">TimeIntervalTimeStampActivity</string>
+    <string name="title_activity_timeout">TimeoutActivity</string>
+    <string name="title_activity_using">UsingActivity</string>
+    <string name="title_activity_all_abm">AllAndAmbActivity</string>
+    <string name="title_activity_contains">ContainsActivity</string>
+    <string name="title_activity_defaultifempty">DefaultIfEmptyActivity</string>
+    <string name="title_activity_sequenceequal">SequenceEqualActivity</string>
+    <string name="title_activity_skip">SkipUntilSkipWhileActivity</string>
+    <string name="title_activity_take">TakeUntilTakeWhileActivity</string>
+    <string name="title_activity_contact">ContactAndCountActivity</string>
+    <string name="title_activity_reduce">Reducectivity</string>
+    <string name="title_activity_publish_connect">PublishAndConnectActivity</string>
+    <string name="title_activity_refcount">RefCountActivity</string>
+    <string name="title_activity_replay">ReplayActivity</string>
+    <string name="title_activity_custom">CustomActivity</string>
+
+</resources>

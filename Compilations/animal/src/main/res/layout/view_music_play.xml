@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="@dimen/y465"
+             android:layout_height="@dimen/x480"
+             android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_dvd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="@dimen/y465"
+            android:layout_height="@dimen/x480"
+            android:src="@drawable/dvd_down"/>
+        <ImageView
+
+            android:layout_width="@dimen/y465"
+            android:layout_height="@dimen/x480"
+            android:src="@drawable/dvd"/>
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/y465"
+            android:layout_height="@dimen/x480"
+            android:src="@drawable/dvd_top"/>
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="@dimen/y175"
+            android:layout_height="@dimen/y175"
+            android:layout_marginLeft="@dimen/y118"
+            android:layout_marginTop="@dimen/x170"
+            android:src="@drawable/music_allbum_cover"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_light"
+        android:layout_width="@dimen/y300"
+        android:layout_height="@dimen/x158"
+        android:layout_marginTop="@dimen/x280"/>
+
+    <ImageView
+        android:id="@+id/iv_phonograph"
+        android:layout_width="@dimen/y120"
+        android:layout_height="@dimen/x480"
+        android:layout_marginLeft="@dimen/y345"
+        android:src="@drawable/gan"/>
+    <ImageView
+        android:id="@+id/iv_phonograph16"
+        android:layout_width="@dimen/y208"
+        android:layout_height="@dimen/x480"
+        android:layout_marginLeft="@dimen/y257"
+        android:src="@drawable/gan_16"
+        android:visibility="gone"/>
+
+</FrameLayout>

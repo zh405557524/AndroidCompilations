@@ -9,7 +9,7 @@ android {
     buildToolsVersion "25.0.0"
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 17
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -33,9 +33,7 @@ android {
         }
     }
 
-    dataBinding {
-        enabled = true
-    }
+
 }
 
 dependencies {
@@ -51,7 +49,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.6.2'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    retrolambdaConfig 'net.orfjackal.retrolambda:retrolambda:2.3.0'
+    retrolambdaConfig 'net.orfjackal.retrolambda:retrolambda:2.4.0'
     compile 'com.trello:rxlifecycle:1.0'
     compile 'com.trello:rxlifecycle-components:1.0'
     compile files('libs/lite-orm-1.9.2.jar')
@@ -67,5 +65,4 @@ dependencies {
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.pnikosis:materialish-progress:1.7'
-
 }

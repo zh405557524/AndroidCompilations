@@ -6,11 +6,13 @@ import com.soul.androidcompilptions.rxandretrofi.entity.GanK;
 import com.soul.androidcompilptions.rxandretrofi.model.RxRetrofitModel;
 import com.soul.androidcompilptions.rxandretrofi.ui.GanKFragment;
 import com.soul.library.base.BasePresenter;
+import com.soul.library.mvp.IModel;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
@@ -36,11 +38,45 @@ public class GanKPresenter extends BasePresenter<GanKFragment> implements GanKCo
     public void loadGanKData(int year, int month, int day) {
         GanKFragment iView = getIView();
         mGanKModel.loadGanKData(year, month, day)
+
                 .map(data -> data.results)
+
                 .map(this::addAllResults)
+
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(ganKList -> iView.loadDataSucceed(ganKList), Throwable::printStackTrace);
+                .subscribe(new Subscriber<List<GanK>>() {
+                               @Override
+                               public void onCompleted() {
+
+                               }
+
+                               @Override
+                               public void onError(Throwable e) {
+
+
+                                   //                                   Throwable::printStackTrace;
+                               }
+
+                               @Override
+                               public void onNext(List<GanK> ganKList) {
+                                   iView.loadDataSucceed(ganKList);
+                               }
+                           }
+                );
+
+
+        mGanKModel.loadGanKData(year, month, day)
+
+                .map(data -> data.results)
+
+                .map(this::addAllResults)
+
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(data ->
+                                iView.loadDataSucceed(data),
+                        Throwable::printStackTrace);
     }
 
     private List<GanK> addAllResults(GanKBean.Result result) {

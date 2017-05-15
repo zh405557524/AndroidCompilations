@@ -12,7 +12,7 @@ import rx.Observable;
 /**
  * * @author soul
  *
- * @项目名:Compilations
+ * @项目名:Compilationsb
  * @包名: com.soul.androidcompilptions.rxandretrofi.api
  * @作者：祝明
  * @描述：TODO

@@ -1,5 +1,9 @@
 package com.soul.library.base;
 
+import com.soul.library.mvp.IModel;
+import com.soul.library.mvp.IPresenter;
+import com.soul.library.mvp.IView;
+
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
 
@@ -16,7 +20,7 @@ import rx.subscriptions.CompositeSubscription;
  * @创建时间：2017/1/11 22:53
  */
 
-public abstract class BasePresenter<V> implements IPresenter {
+public abstract class BasePresenter<V extends IView> implements IPresenter {
 
 
     private CompositeSubscription mCompositeSubscription;

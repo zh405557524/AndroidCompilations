@@ -21,7 +21,8 @@ import android.view.View;
  *                   |-public int getWidth()            获取宽度
  *                   |-public int getHeight()           获取高度
  *                   |-public Canvas beginRecording(int
- *                                    width,int height) 开始录制(返回一个Canvas，在Canvas中所有的绘制都会存在Picture中)
+ *                                    width,int height) 开始录制(返回一个Canvas，在Canvas中所有的绘制都
+ *                                    会存在Picture中)
  *                   |-
  *
  *          2 drawBitmap
@@ -47,7 +48,6 @@ public class CanvasPictureAndBitmap extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
 
 
     }

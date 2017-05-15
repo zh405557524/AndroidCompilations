@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.soul.bluetoothdemo.MainActivity">
+    <Button
+        android:id="@+id/bt_searchBluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收索蓝牙设备"/>
+    <TextView android:id="@+id/tv_connect" android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="已匹配设备"/>
+    <ListView
+        android:id="@+id/listView_connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="可用设备" android:visibility="gone"/>
+
+    <ListView android:id="@+id/listView"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"/>
+
+</LinearLayout>

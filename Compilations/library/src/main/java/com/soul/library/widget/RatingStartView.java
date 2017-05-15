@@ -105,6 +105,13 @@ public class RatingStartView extends View {
 
     }
 
+
+    @Override
+    public void layout(int l, int t, int r, int b) {
+        super.layout(l, t, r, b);
+    }
+
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);

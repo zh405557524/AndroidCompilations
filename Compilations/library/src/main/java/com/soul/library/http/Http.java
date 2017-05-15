@@ -137,6 +137,7 @@ public class Http {
                             .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                             .addConverterFactory(GsonConverterFactory.create()) //这里是用的fastjson的
                             .build();
+
                 }
             }
         }

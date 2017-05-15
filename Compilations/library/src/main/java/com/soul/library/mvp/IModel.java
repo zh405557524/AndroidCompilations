@@ -10,8 +10,6 @@ package com.soul.library.mvp;
  * @创建时间：2017/2/7 19:26
  */
 
-public class IModel {
-
-
+public interface IModel {
 
 }

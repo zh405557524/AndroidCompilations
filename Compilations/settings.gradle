@@ -1,1 +1,1 @@
-include ':app', ':library', ':servicedemo', ':VisitRemoteService', ':broadcastreceiverdemo', ':acceptbroadcast', ':conentprovierdemo'
+include ':app', ':library', ':servicedemo', ':VisitRemoteService', ':broadcastreceiverdemo', ':acceptbroadcast', ':conentprovierdemo', ':multimediademo', ':bluetoothdemo', ':customviewdemo', ':mylibrary', ':rxandroid', ':animal'

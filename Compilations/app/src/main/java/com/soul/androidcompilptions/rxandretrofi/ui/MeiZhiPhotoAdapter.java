@@ -6,8 +6,8 @@ import android.view.View;
 import com.bumptech.glide.Glide;
 import com.soul.androidcompilptions.R;
 import com.soul.androidcompilptions.rxandretrofi.entity.MeiZhi;
+import com.soul.library.base.BaseAdapter;
 import com.soul.library.widget.RatioImageView;
-import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.base.ViewHolder;
 
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.List;
  * @创建时间：2017/1/16 16:27
  */
 
-public class MeiZhiPhotoAdapter extends CommonAdapter<MeiZhi> {
+public class MeiZhiPhotoAdapter extends BaseAdapter<MeiZhi> {
     private final Listener listener;
 
     public interface Listener {

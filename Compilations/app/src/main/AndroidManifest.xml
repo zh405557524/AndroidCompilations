@@ -17,6 +17,8 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         <activity android:name=".MainActivity">
+
+
         </activity>
         <activity
             android:name=".customview.sticky.StickyNavActivity"
@@ -60,20 +62,23 @@
         <activity
             android:name=".rxandretrofi.RxRetrofitActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity
             android:name=".rxandretrofi.ui.GanKActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".rxandretrofi.ui.WebActivity"
-                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        <activity
+            android:name=".rxandretrofi.ui.WebActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".ComponentActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
-        >
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
     </application>
 

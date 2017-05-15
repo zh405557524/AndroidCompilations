@@ -22,6 +22,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class MainActivity extends ListActivity {
     private final String CATERGORY = "com.soul.androidcompilptions.category";
@@ -36,7 +38,7 @@ public class MainActivity extends ListActivity {
         if (path == null) {
             path = "";
         }
-
+        ExecutorService es = Executors.newFixedThreadPool(2);
         setListAdapter(new SimpleAdapter(this, getData(path),
                 android.R.layout.simple_list_item_1, new String[]{"title"},
                 new int[]{android.R.id.text1}));

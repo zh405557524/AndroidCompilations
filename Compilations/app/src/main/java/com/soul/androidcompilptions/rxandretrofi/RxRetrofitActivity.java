@@ -3,9 +3,10 @@ package com.soul.androidcompilptions.rxandretrofi;
 import android.content.Intent;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
+import android.view.WindowManager;
 
 import com.soul.androidcompilptions.R;
 import com.soul.androidcompilptions.rxandretrofi.contract.RxRetrofitContract;
@@ -40,8 +41,8 @@ public class RxRetrofitActivity extends BaseRxActivity<RxRetrofitPresenter> impl
     private MeiZhiPhotoAdapter mMeiZhiCommonAdapter;
     private boolean mIsRequestDataRefresh = false;
     private HeaderAndFooterWrapper mHeaderAndFooterWrapper;
+    private LoadMoreWrapper mLoadMoreAdapter;
 
-    private LoadMoreWrapper mLoadMoreWrapper;
 
     @Override
     protected int getLayoutId() {
@@ -55,16 +56,17 @@ public class RxRetrofitActivity extends BaseRxActivity<RxRetrofitPresenter> impl
 
     @Override
     protected void initView() {
-        meiZhiRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+//        meiZhiRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        meiZhiRecyclerView.setLayoutManager(new LinearLayoutManager(RxRetrofitActivity.this));
+//        getView().setSystemUiVisibility(
+//                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+//                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+//                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+//                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+//                        | View.SYSTEM_UI_FLAG_FULLSCREEN
+//                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-
-        getView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
     }
 
     @Override
@@ -84,13 +86,16 @@ public class RxRetrofitActivity extends BaseRxActivity<RxRetrofitPresenter> impl
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus) {
-            getView().setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);}
+//            getView().setSystemUiVisibility(
+//                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+//                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+//                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+//                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+//                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+//                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        }
     }
 
     /**
@@ -100,12 +105,12 @@ public class RxRetrofitActivity extends BaseRxActivity<RxRetrofitPresenter> impl
      */
     private void initAdapterHeaderAndFooterWrapper(List<MeiZhi> localData) {
         mMeiZhiCommonAdapter = new MeiZhiPhotoAdapter(mContext, R.layout.item_meizhi, localData, this);
-        mHeaderAndFooterWrapper = new HeaderAndFooterWrapper(mMeiZhiCommonAdapter);
-        mLoadMoreWrapper = new LoadMoreWrapper(mHeaderAndFooterWrapper);
-        mLoadMoreWrapper.setLoadMoreView(R.layout.default_loading);
-        meiZhiRecyclerView.setAdapter(mLoadMoreWrapper);
+
+//        mLoadMoreAdapter = mMeiZhiCommonAdapter.getLoadMoreAdapter();
+        meiZhiRecyclerView.setAdapter(mMeiZhiCommonAdapter.getLoadMoreAdapter());
+
         //上拉加载
-        mLoadMoreWrapper.setOnLoadMoreListener(() -> mPresenter.loadMeiZiData(++page, true));
+        mMeiZhiCommonAdapter.setOnLoadMoreListener(() -> mPresenter.loadMeiZiData(++page, true));
     }
 
     @Override
@@ -137,8 +142,7 @@ public class RxRetrofitActivity extends BaseRxActivity<RxRetrofitPresenter> impl
             } else {
                 mMeiZhiCommonAdapter.setData(meiZhiBean);
             }
-            mLoadMoreWrapper.notifyDataSetChanged();
-            mMeiZhiCommonAdapter.notifyDataSetChanged();
+            mMeiZhiCommonAdapter.notifyDataChanged();
         }
     }
 

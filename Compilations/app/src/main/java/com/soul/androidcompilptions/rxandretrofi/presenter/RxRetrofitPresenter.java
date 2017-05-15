@@ -8,6 +8,7 @@ import com.soul.androidcompilptions.rxandretrofi.entity.GanK;
 import com.soul.androidcompilptions.rxandretrofi.entity.MeiZhi;
 import com.soul.androidcompilptions.rxandretrofi.model.RxRetrofitModel;
 import com.soul.library.base.BasePresenter;
+import com.soul.library.mvp.IModel;
 import com.soul.library.utils.Dates;
 
 import java.util.Date;

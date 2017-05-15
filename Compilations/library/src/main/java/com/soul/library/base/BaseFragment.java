@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.soul.library.mvp.IView;
+
 import butterknife.ButterKnife;
 
 /**
@@ -18,38 +20,13 @@ import butterknife.ButterKnife;
  * @描述：TODO
  * @创建时间：2015/12/30 10:42
  */
-public abstract class BaseFragment<P extends BasePresenter> extends Fragment {
+public abstract class BaseFragment<P extends BasePresenter> extends Fragment implements IView {
 
     protected P mPresenter;
 
     protected Activity mActivity;
     protected int state;
 
-    /**
-     * 刷新或加载时调用的方法
-     *
-     * @param pageNum
-     * @param state
-     */
-    protected void loadData(int pageNum, int state) {
-
-    }
-
-    ;
-
-	/*@Override
-    public void onRefresh() {
-
-		pageNum = 1;
-		loadData(1, REFRESH);
-	}
-
-	@Override
-	public void onLoadMore() {
-
-		loadData(++pageNum, MORE);
-	}
-*/
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -114,7 +91,6 @@ public abstract class BaseFragment<P extends BasePresenter> extends Fragment {
                 .getSupportFragmentManager().beginTransaction();
         // 设置参数
         fragment.setArguments(bundle);
-
         transaction.add(id, fragment, tag);
         transaction.addToBackStack(tag);
         transaction.commit();

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.soul.library.mvp.IView;
 import com.soul.library.utils.LogUtils;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
@@ -22,7 +23,7 @@ import butterknife.ButterKnife;
  */
 
 public abstract class BaseRxActivity<P extends BasePresenter> extends RxAppCompatActivity implements
-        View.OnClickListener {
+        View.OnClickListener,IView {
 
 
     protected View view;

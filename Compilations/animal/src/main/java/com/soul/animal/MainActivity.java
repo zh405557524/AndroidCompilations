@@ -7,6 +7,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.soul.animal.animal.MusicStateAnimation;
 
@@ -25,10 +26,31 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.ll_songInfo)
     LinearLayout songInfo;
 
+    /**
+     * 歌名
+     */
+    @BindView(R.id.tv_songName)
+    TextView songName;
+
+    /**
+     * 歌手
+     */
+    @BindView(R.id.tv_singerName)
+    TextView singerName;
+
+    /**
+     * 播放器时间
+     */
+    @BindView(R.id.ll_music_time)
+    LinearLayout playTime;
+
     @BindView(R.id.rl_content)
     RelativeLayout mRelativeLayout;
 
-    @BindView(R.id.iv_cover)
+    /**
+     * 封面
+     */
+    @BindView(R.id.iv_player_cover)
     ImageView ivCover;
 
 
@@ -41,18 +63,20 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        mMusicPlayAnimalView.setVisibility(View.GONE);
         mMusicStateAnimation = new MusicStateAnimation();
-        mMusicStateAnimation.startAnimationToMainFromMusicCover(mMusicPlayAnimalView.getMusicCover(), mMusicPlayAnimalView, songInfo);
+        mMusicStateAnimation.startAlphaAnimal(mMusicPlayAnimalView, 0.f, 0);
     }
 
     @OnClick({R.id.ll_play_info})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.ll_play_info:
-                mMusicPlayAnimalView.setVisibility(View.VISIBLE);
-                mMusicPlayAnimalView.start();
-                mMusicStateAnimation.startAnimationToMusicCover(mMusicPlayAnimalView.getMusicCover(), mMusicPlayAnimalView, songInfo);
+                //                mMusicPlayAnimalView.start();
+                llPlayInfo.setClickable(false);
+                mMusicStateAnimation.startAlphaAnimal(songName, 0.f, 0);
+                mMusicStateAnimation.startAlphaAnimal(singerName, 0.f, 0);
+                mMusicStateAnimation.startAlphaAnimal(ivCover, 0.f, 0);
+                mMusicStateAnimation.startAnimationToMusicCover(this, ivCover, mMusicPlayAnimalView.getMusicCover(), mMusicPlayAnimalView);
                 break;
         }
     }
@@ -60,8 +84,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (mMusicPlayAnimalView.getVisibility() == View.VISIBLE) {
-            mMusicStateAnimation.startAnimationToMainFromMusicCover(mMusicPlayAnimalView.getMusicCover(), mMusicPlayAnimalView, songInfo);
-            mMusicPlayAnimalView.stop();
+            mMusicStateAnimation.startAnimationToMainFromMusicCover(this, ivCover, mMusicPlayAnimalView.getMusicCover(), mMusicPlayAnimalView);
+            llPlayInfo.setClickable(true);
+            mMusicStateAnimation.startAlphaAnimal(llPlayInfo, 1.f, 0);
+            mMusicStateAnimation.startAlphaAnimal(songName, 1.f, 0);
+            mMusicStateAnimation.startAlphaAnimal(singerName, 1.f, 0);
+            mMusicStateAnimation.startAlphaAnimal(ivCover, 1.f, 0);
             return;
         }
         super.onBackPressed();
@@ -71,9 +99,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         if (mMusicPlayAnimalView != null) {
-
             mMusicPlayAnimalView.onDestroy();
-
         }
     }
 }

@@ -84,7 +84,7 @@
         android:visibility="visible">
 
         <ImageView
-            android:id="@+id/iv_cover"
+            android:id="@+id/iv_player_cover"
             android:layout_width="@dimen/x64"
             android:layout_height="@dimen/x64"
             android:layout_gravity="center_vertical"
@@ -129,7 +129,9 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/x18"/>
 
-                <LinearLayout android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/ll_music_time"
+                    android:layout_width="wrap_content"
                               android:layout_height="match_parent"
                               android:layout_alignParentRight="true"
                               android:layout_centerVertical="true"

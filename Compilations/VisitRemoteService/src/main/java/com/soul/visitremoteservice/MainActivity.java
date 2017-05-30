@@ -1,7 +1,6 @@
 package com.soul.visitremoteservice;
 
 import android.content.ComponentName;
-import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -20,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = new Intent();
-        intent.setPackage("com.soul.servicedemo");
-        mMyConn = new MyConn();
-        bindService(intent, mMyConn, BIND_AUTO_CREATE);
+//        Intent intent = new Intent();
+        //        intent.setPackage("com.soul.servicedemo");
+        //        mMyConn = new MyConn();
+        //        bindService(intent, mMyConn, BIND_AUTO_CREATE);
     }
 
 

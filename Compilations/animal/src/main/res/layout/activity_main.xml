@@ -19,5 +19,5 @@
         android:layout_marginTop="@dimen/x20"/>
 
     <include layout="@layout/player_main"/>
-
+    
 </RelativeLayout>

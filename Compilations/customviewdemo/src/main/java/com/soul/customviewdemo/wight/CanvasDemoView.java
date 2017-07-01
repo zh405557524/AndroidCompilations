@@ -67,8 +67,8 @@ public class CanvasDemoView extends View {
         //
         //        //描边
         //        paint.setStyle(Paint.Style.STROKE);
+        //         paint.setStrokeWidth(40);
         //        canvas.drawCircle(100, 100, 50, paint);
-        //
         //        //填充
         //        paint.setStyle(Paint.Style.FILL);
         //        canvas.drawCircle(100, 300, 50, paint);
@@ -123,7 +123,7 @@ public class CanvasDemoView extends View {
 
 
         /**------------------------------旋转 start--------------------------------*/
-                RectF rectF = new RectF(0, -400, 400, 0);
+        RectF rectF = new RectF(0, -400, 400, 0);
         mPaint.setColor(Color.BLACK);
         canvas.drawRect(rectF, mPaint);
         canvas.rotate(180, 200, 0);//旋转180度 旋转中心向右偏移200
@@ -139,7 +139,7 @@ public class CanvasDemoView extends View {
             canvas.rotate(10);
         }
 
-//        canvas.save();
+        //        canvas.save();
 
         /**------------------------------旋转 end--------------------------------*/
 
@@ -149,13 +149,13 @@ public class CanvasDemoView extends View {
         canvas.drawRect(rectF1, mPaint);
 
         canvas.skew(1, 0);//水平错切  <- 45度
-        canvas.skew(0,1);//垂直错切
+        canvas.skew(0, 1);//垂直错切
 
         mPaint.setColor(Color.BLUE);
         canvas.drawRect(rectF1, mPaint);
 
         /**------------------------------错切 end--------------------------------*/
-//        canvas.restore();
+        //        canvas.restore();
 
     }
 }

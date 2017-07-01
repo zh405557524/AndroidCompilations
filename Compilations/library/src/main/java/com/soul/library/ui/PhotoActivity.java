@@ -43,7 +43,7 @@ public class PhotoActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent != null) {
             mUrl = intent.getStringExtra(URL);
-//            Picasso.with(this).load(mUrl).into(mImageView);
+            //            Picasso.with(this).load(mUrl).into(mImageView);
             AlxPicassoUtils.displayImageProgress(mUrl, mImageView, mProgressWheel, mTv);
         }
     }

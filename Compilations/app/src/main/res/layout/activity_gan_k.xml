@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.soul.androidcompilptions.rxandretrofi.ui.GanKActivity">
+    tools:context="com.soul.androidcompilptions.rxandretrofi.ui.gan.GanKActivity">
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_viewpager"
         android:layout_width="match_parent"

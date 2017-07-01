@@ -5,7 +5,6 @@ import com.soul.library.mvp.IPresenter;
 import com.soul.library.mvp.IView;
 
 import java.lang.ref.WeakReference;
-import java.util.HashMap;
 
 import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
@@ -20,19 +19,21 @@ import rx.subscriptions.CompositeSubscription;
  * @创建时间：2017/1/11 22:53
  */
 
-public abstract class BasePresenter<V extends IView> implements IPresenter {
+public abstract class BasePresenter<V extends IView, M extends IModel> implements IPresenter {
 
 
     private CompositeSubscription mCompositeSubscription;
 
     private WeakReference mActReference;
-    protected V iView;
 
-    public abstract HashMap<String, IModel> getiModelMap();
+    protected M mModel;
+    protected V mView;
+
 
     @Override
     public void attachView(IView view) {
         mActReference = new WeakReference(view);
+        mView = (V) mActReference.get();
     }
 
 
@@ -50,21 +51,9 @@ public abstract class BasePresenter<V extends IView> implements IPresenter {
             mActReference.clear();
             mActReference = null;
         }
-        if(mCompositeSubscription!=null){
+        if (mCompositeSubscription != null) {
             mCompositeSubscription.unsubscribe();
         }
     }
 
-
-    @Override
-    public V getIView() {
-        return (V) mActReference.get();
-    }
-
-    /**
-     * @param models
-     * @return
-     * 添加多个model,如有需要
-     */
-    public abstract HashMap<String, IModel> loadModelMap(IModel... models);
 }

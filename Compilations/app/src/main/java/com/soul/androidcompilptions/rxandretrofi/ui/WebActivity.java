@@ -16,6 +16,7 @@ import com.soul.library.base.BaseActivity;
 import com.soul.library.widget.NumberProgressBar;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 public class WebActivity extends BaseActivity {
 
@@ -32,7 +33,6 @@ public class WebActivity extends BaseActivity {
     NumberProgressBar mProgressbar;
 
     private String mUrl, mTitle;
-
 
 
     @Override
@@ -57,6 +57,8 @@ public class WebActivity extends BaseActivity {
         settings.setAppCacheEnabled(true);
         settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         settings.setSupportZoom(true);
+        //        settings.setJavaScriptEnabled(true);
+        settings.setLoadWithOverviewMode(true);
         mWebView.setWebChromeClient(new ChromeClient());
         mWebView.setWebViewClient(new LoveClient());
 
@@ -72,12 +74,22 @@ public class WebActivity extends BaseActivity {
         });
         mTextSwitcher.setInAnimation(this, android.R.anim.fade_in);
         mTextSwitcher.setOutAnimation(this, android.R.anim.fade_out);
-        if (mTitle != null) setTitle(mTitle);
+        if (mTitle != null)
+            setTitle(mTitle);
     }
 
     @Override
     protected void initEvent() {
 
+    }
+
+    @OnClick({R.id.rl_back})
+    void OnClick(View view) {
+        switch (view.getId()) {
+            case R.id.rl_back:
+                finish();
+                break;
+        }
     }
 
     @Override
@@ -101,10 +113,10 @@ public class WebActivity extends BaseActivity {
     }
 
 
-
     private class ChromeClient extends WebChromeClient {
 
-        @Override public void onProgressChanged(WebView view, int newProgress) {
+        @Override
+        public void onProgressChanged(WebView view, int newProgress) {
             super.onProgressChanged(view, newProgress);
             mProgressbar.setProgress(newProgress);
             if (newProgress == 100) {
@@ -115,7 +127,8 @@ public class WebActivity extends BaseActivity {
         }
 
 
-        @Override public void onReceivedTitle(WebView view, String title) {
+        @Override
+        public void onReceivedTitle(WebView view, String title) {
             super.onReceivedTitle(view, title);
             setTitle(title);
         }
@@ -124,7 +137,8 @@ public class WebActivity extends BaseActivity {
     private class LoveClient extends WebViewClient {
 
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            if (url != null) view.loadUrl(url);
+            if (url != null)
+                view.loadUrl(url);
             return true;
         }
     }

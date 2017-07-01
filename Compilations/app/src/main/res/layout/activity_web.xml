@@ -9,9 +9,9 @@
     android:orientation="vertical">
     <TextSwitcher
         android:id="@+id/title"
-        android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
     <com.soul.library.widget.NumberProgressBar
         android:id="@+id/progressbar"
@@ -21,9 +21,19 @@
         app:progress_text_size="0sp"
         app:progress_text_visibility="invisible"
         app:progress_unreached_bar_height="2dp"/>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-    <WebView
-        android:id="@+id/webView"
-        android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/x100"/>
+    </RelativeLayout>
+
 
 </LinearLayout>

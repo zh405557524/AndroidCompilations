@@ -24,6 +24,14 @@ public class StringUtils {
         return s == null || s.length() == 0;
     }
 
+
+
+    /**
+     * 判断字符串是否不为空 Determines if a string is not empty.
+     */
+    public static boolean isNotEmpty(String string) {
+        return string != null && !string.equals("") && string.length() > 0;
+    }
     /**
      * 判断字符串是否为null或全为空格
      *

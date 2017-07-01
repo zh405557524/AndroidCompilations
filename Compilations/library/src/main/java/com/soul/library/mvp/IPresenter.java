@@ -18,9 +18,4 @@ public interface IPresenter<V extends IView> {
      */
     void detachView();
 
-
-    /**
-     * @return 获取View
-     */
-    IView getIView();
 }

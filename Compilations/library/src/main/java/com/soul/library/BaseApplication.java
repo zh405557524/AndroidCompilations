@@ -118,4 +118,8 @@ public class BaseApplication extends Application {
             }
         });
     }
+
+    public static LiteOrm GetOrmInstance() {
+        return sDb;
+    }
 }

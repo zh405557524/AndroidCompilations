@@ -190,8 +190,6 @@ public class MusicPlayAnimalView extends FrameLayout {
                 mLight.setImageResource(R.drawable.light_15);
                 break;
         }
-
-
     }
 
     /**
@@ -203,7 +201,6 @@ public class MusicPlayAnimalView extends FrameLayout {
             mPhonographAnimation.setDuration(sDurationPhonographMillis);
             mPhonograph.startAnimation(mPhonographAnimation);
         }
-
         if (mAnimalState != STATE_START) {
             if (mAnimalState != STATE_PAUSE) {
                 stop();

@@ -31,5 +31,4 @@ public class BaseActivity extends AppCompatActivity {
             mResultView.setText(mResultView.getText() + "\n" + i);
         });
     }
-
 }

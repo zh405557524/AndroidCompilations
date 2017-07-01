@@ -74,7 +74,6 @@ public class MusicStateAnimation {
         View view = addViewToAnimLayout(animLayout, imageView, formLocation,
                 CommonUtil.getDimens(activity, R.dimen.x64),
                 CommonUtil.getDimens(activity, R.dimen.x64));
-
         //4动画逻辑
         int moveX = toLocation.left - formLocation.left + (toLocation.right - toLocation.left) / 2
                 - (formLocation.right - formLocation.left) / 2;

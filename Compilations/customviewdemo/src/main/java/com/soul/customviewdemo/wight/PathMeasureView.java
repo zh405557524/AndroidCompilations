@@ -261,7 +261,7 @@ public class PathMeasureView extends View {
         Path path = new Path();
         path.addCircle(0, 0, 200, Path.Direction.CW);
 
-        mCurrentValue += 0.01f;
+        mCurrentValue += 0.001f;
         if (mCurrentValue >= 1) {
             mCurrentValue = 0.f;
         }

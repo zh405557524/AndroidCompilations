@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.soul.library.utils.LogUtils;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 
 /**
@@ -23,28 +24,26 @@ import butterknife.ButterKnife;
  * @创建时间：2017/1/11 22:57
  */
 
-public abstract class BaseActivity extends AppCompatActivity implements
-         View.OnClickListener {
+public abstract class BaseActivity extends AppCompatActivity {
 
     protected View view;
 
     protected Context mContext;
+    private Unbinder mBind;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getView());
         mContext = BaseActivity.this;
-        ButterKnife.bind(this);
+        mBind = ButterKnife.bind(this);
         initView();
         initData();
         initEvent();
     }
 
 
-
     protected abstract int getLayoutId();
-
 
 
     protected abstract void initView();
@@ -62,17 +61,6 @@ public abstract class BaseActivity extends AppCompatActivity implements
         view = View.inflate(this, getLayoutId(), null);
         return view;
     }
-
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            default:
-                otherViewClick(view);
-                break;
-        }
-    }
-
 
 
     @Override
@@ -119,4 +107,9 @@ public abstract class BaseActivity extends AppCompatActivity implements
         LogUtils.e(getClass().getSimpleName(), str);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mBind.unbind();
+    }
 }

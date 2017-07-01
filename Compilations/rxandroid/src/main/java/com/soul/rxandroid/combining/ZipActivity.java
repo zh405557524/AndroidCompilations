@@ -25,8 +25,9 @@ public class ZipActivity extends BaseActivity {
      */
     private Observable<String> zipWithObserver() {
 
-        return Observable.zip(createObserver(2), createObserver(3), (s, s2) -> "-" + s2);
+        return createObserver(2).zipWith(createObserver(3), (s, s2) -> s + "-" + s2);
     }
+
 
     private Observable<String> zipWithIterableObserver() {
         return Observable.zip(createObserver(2), createObserver(3), createObserver(4), (s, s2, s3) -> s + "-" + s2 + "--" + s3);

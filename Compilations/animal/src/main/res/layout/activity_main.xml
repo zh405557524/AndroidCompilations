@@ -9,9 +9,17 @@
     android:background="@drawable/bg02"
     tools:context="com.soul.animal.MainActivity">
 
+    <!--
+        <com.soul.animal.MusicPlayAnimalView
+            android:id="@+id/musicPlayAnimal"
+            android:layout_width="@dimen/y465"
+            android:layout_height="@dimen/x480"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/y12"
+            android:layout_marginTop="@dimen/x20"/>-->
 
-    <com.soul.animal.MusicPlayAnimalView
-        android:id="@+id/musicPlayAnimal"
+    <FrameLayout
+        android:id="@+id/fl_content"
         android:layout_width="@dimen/y465"
         android:layout_height="@dimen/x480"
         android:layout_alignParentRight="true"
@@ -19,5 +27,5 @@
         android:layout_marginTop="@dimen/x20"/>
 
     <include layout="@layout/player_main"/>
-    
+
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package com.soul.animal;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
@@ -17,7 +18,7 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.musicPlayAnimal)
+    //    @BindView(R.id.musicPlayAnimal)
     MusicPlayAnimalView mMusicPlayAnimalView;
 
     @BindView(R.id.ll_play_info)
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private MusicStateAnimation mMusicStateAnimation;
+    private MusicCoverFragment mMusicCoverFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         mMusicStateAnimation = new MusicStateAnimation();
-        mMusicStateAnimation.startAlphaAnimal(mMusicPlayAnimalView, 0.f, 0);
+        //        mMusicStateAnimation.startAlphaAnimal(mMusicPlayAnimalView, 0.f, 0);
+        mMusicCoverFragment = new MusicCoverFragment();
     }
 
     @OnClick({R.id.ll_play_info})
@@ -72,34 +75,39 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.ll_play_info:
                 //                mMusicPlayAnimalView.start();
-                llPlayInfo.setClickable(false);
-                mMusicStateAnimation.startAlphaAnimal(songName, 0.f, 0);
-                mMusicStateAnimation.startAlphaAnimal(singerName, 0.f, 0);
-                mMusicStateAnimation.startAlphaAnimal(ivCover, 0.f, 0);
-                mMusicStateAnimation.startAnimationToMusicCover(this, ivCover, mMusicPlayAnimalView.getMusicCover(), mMusicPlayAnimalView);
+                //                llPlayInfo.setClickable(false);
+                //                mMusicStateAnimation.startAlphaAnimal(songName, 0.f, 0);
+                //                mMusicStateAnimation.startAlphaAnimal(singerName, 0.f, 0);
+                //                mMusicStateAnimation.startAlphaAnimal(ivCover, 0.f, 0);
+                //                mMusicStateAnimation.startAnimationToMusicCover(this, ivCover, mMusicPlayAnimalView.getMusicCover(), mMusicPlayAnimalView);
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.add(R.id.fl_content, mMusicCoverFragment);
+                fragmentTransaction.addToBackStack("mMusicCoverFragment");
+                fragmentTransaction.commitAllowingStateLoss();
+
                 break;
         }
     }
 
     @Override
     public void onBackPressed() {
-        if (mMusicPlayAnimalView.getVisibility() == View.VISIBLE) {
-            mMusicStateAnimation.startAnimationToMainFromMusicCover(this, ivCover, mMusicPlayAnimalView.getMusicCover(), mMusicPlayAnimalView);
-            llPlayInfo.setClickable(true);
-            mMusicStateAnimation.startAlphaAnimal(llPlayInfo, 1.f, 0);
-            mMusicStateAnimation.startAlphaAnimal(songName, 1.f, 0);
-            mMusicStateAnimation.startAlphaAnimal(singerName, 1.f, 0);
-            mMusicStateAnimation.startAlphaAnimal(ivCover, 1.f, 0);
-            return;
-        }
+        //        if (mMusicPlayAnimalView.getVisibility() == View.VISIBLE) {
+        //            mMusicStateAnimation.startAnimationToMainFromMusicCover(this, ivCover, mMusicPlayAnimalView.getMusicCover(), mMusicPlayAnimalView);
+        //            llPlayInfo.setClickable(true);
+        //            mMusicStateAnimation.startAlphaAnimal(llPlayInfo, 1.f, 0);
+        //            mMusicStateAnimation.startAlphaAnimal(songName, 1.f, 0);
+        //            mMusicStateAnimation.startAlphaAnimal(singerName, 1.f, 0);
+        //            mMusicStateAnimation.startAlphaAnimal(ivCover, 1.f, 0);
+        //            return;
+        //        }
         super.onBackPressed();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (mMusicPlayAnimalView != null) {
-            mMusicPlayAnimalView.onDestroy();
-        }
+        //        if (mMusicPlayAnimalView != null) {
+        //            mMusicPlayAnimalView.onDestroy();
+        //        }
     }
 }

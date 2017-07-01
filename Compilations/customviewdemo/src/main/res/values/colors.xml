@@ -4,7 +4,11 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="checkBack">#fe5f10</color>
-    
+
     <color name="progressBack">#fce49c</color>
     <color name="progressColor">#ffa802</color>
+    <color name="circleColor">#64b9fe</color>
+    <color name="circleColor2">#88c0dffd</color>
+    <color name="backColor">#33c2ddfa</color>
+    <color name="blackColor">#000000</color>
 </resources>

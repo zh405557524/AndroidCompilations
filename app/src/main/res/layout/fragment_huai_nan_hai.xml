@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.soul.androidcompilptions.rxandretrofi.ui.huai.HuaiNanHaiFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_myCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x60"
+        android:layout_marginTop="@dimen/x40">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="我的课程"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_myCache"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x60"
+        android:layout_marginTop="@dimen/x40">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="我的缓存"/>
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x100"/>
+
+</LinearLayout>

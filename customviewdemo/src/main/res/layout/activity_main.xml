@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.soul.customviewdemo.MainActivity">
+
+    <com.soul.customviewdemo.test.VoiceAnimalView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+
+    <!--canvas-->
+    <com.soul.customviewdemo.wight.CanvasDemoView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <!--图片-->
+    <com.soul.customviewdemo.wight.CanvasPictureAndBitmap
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:visibility="gone"/>
+
+    <!--文字-->
+    <com.soul.customviewdemo.wight.DrawTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <!--图片练习 按钮-->
+    <include layout="@layout/text_picture"
+             android:visibility="gone"/>
+
+    <!--图片练习 进度条-->
+    <com.soul.customviewdemo.test.LeafLoadingView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <!--path-->
+    <com.soul.customviewdemo.wight.PathView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <!--PathMeasure-->
+    <com.soul.customviewdemo.wight.PathMeasureView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <!--matrix-->
+    <com.soul.customviewdemo.wight.MatrixView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <com.soul.customviewdemo.test.wheel.ProgrammeView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+    />
+
+    <com.soul.customviewdemo.wight.MatrixCameraView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    />
+
+</RelativeLayout>

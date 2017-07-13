@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/player_root"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/x80"
+              android:layout_alignParentBottom="true"
+              android:background="@drawable/shape_player_bg"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <View android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"/>
+
+        <RelativeLayout android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3">
+
+            <ImageView
+                android:id="@+id/iv_previous"
+                android:layout_width="@dimen/x80"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:scaleType="center"
+                android:src="@drawable/previous_selector"/>
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/rl_play"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:layout_marginRight="@dimen/x5"
+                        android:layout_weight="3"
+                        android:clickable="true">
+            <ImageView
+                android:id="@+id/iv_play_outter"
+                android:layout_width="@dimen/x80"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:scaleType="center"
+                android:src="@drawable/outer_selector"/>
+
+            <ImageView
+                android:id="@+id/iv_play_inner"
+                android:layout_width="@dimen/x80"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:scaleType="center"
+                android:src="@drawable/inner_selector"/>
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3">
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="@dimen/x80"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:scaleType="center"
+                android:src="@drawable/next_selector"/>
+        </RelativeLayout>
+
+        <View android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_play_info"
+        android:layout_width="@dimen/x438"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:paddingLeft="@dimen/x44"
+        android:paddingRight="@dimen/x49"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_player_cover"
+            android:layout_width="@dimen/x64"
+            android:layout_height="@dimen/x64"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_playbar_logo"/>
+
+        <LinearLayout
+            android:id="@+id/ll_songInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/x8"
+            android:paddingLeft="@dimen/x19"
+            android:paddingTop="@dimen/x8">
+
+            <TextView
+                android:id="@+id/tv_songName"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="听你想听"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x20"/>
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_singerName"
+                    android:layout_width="@dimen/x149"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:lines="1"
+                    android:text="车悦宝"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x18"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_music_time"
+                    android:layout_width="wrap_content"
+                              android:layout_height="match_parent"
+                              android:layout_alignParentRight="true"
+                              android:layout_centerVertical="true"
+                              android:gravity="center_vertical"
+                              android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_playTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00/"
+                        android:textColor="@color/label_duration_played"
+                        android:textSize="@dimen/x14"/>
+
+                    <TextView
+                        android:id="@+id/tv_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:textColor="@color/label_duration"
+                        android:textSize="@dimen/x14"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginRight="@dimen/x9"
+                  android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_collect"
+            android:layout_width="@dimen/x80"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/collect_selector"/>
+
+        <ImageView
+            android:id="@+id/iv_loop"
+            android:layout_width="@dimen/x80"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/list_play_mode"/>
+
+        <ImageView
+            android:id="@+id/iv_playList"
+            android:layout_width="@dimen/x80"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/list_selector"/>
+    </LinearLayout>
+</LinearLayout>

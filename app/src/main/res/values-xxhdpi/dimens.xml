@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 1080*1920 -->
+    <dimen name="tv_width">20dp</dimen>
+    
+</resources>

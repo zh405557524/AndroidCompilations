@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x242"
+                android:background="@color/white1">
+
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="@dimen/x167"
+        android:layout_height="@dimen/x167"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x45"/>
+
+    <ImageView
+        android:id="@+id/iv_state"
+        android:layout_width="@dimen/x167"
+        android:layout_height="@dimen/x167"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x45"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginRight="@dimen/x150"
+        android:layout_toRightOf="@id/iv_photo"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x40"/>
+        <TextView
+            android:id="@+id/tv_stateAndType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/line_color"
+            android:textSize="@dimen/x35"/>
+
+        <ProgressBar
+            android:id="@+id/pb"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="@dimen/x512"
+            android:layout_height="@dimen/y17"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="@dimen/x120"
+        android:layout_height="@dimen/x66"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x20"
+        android:gravity="center"
+        android:text="开始"/>
+
+
+</RelativeLayout>

@@ -5,6 +5,8 @@ import com.litesuits.orm.db.assit.QueryBuilder;
 import com.litesuits.orm.db.assit.WhereBuilder;
 import com.litesuits.orm.db.model.ColumnsValue;
 import com.litesuits.orm.db.model.ConflictAlgorithm;
+import com.soul.androidcompilptions.rxandretrofi.bean.BaseBean;
+import com.soul.androidcompilptions.rxandretrofi.bean.KeyValueBean;
 import com.soul.library.BaseApplication;
 
 import java.util.ArrayList;
@@ -35,6 +37,47 @@ public class DBHelper {
         }
         return sHelper;
     }
+
+
+    /**
+     * 更新默认配置
+     *
+     * @param key
+     * @param val
+     * @return
+     */
+    public long insertOrUpdateValue(String key, String val) {
+        ArrayList<KeyValueBean> query = mLiteOrm.query(new QueryBuilder<>(KeyValueBean.class)
+                .where("key=?", key));
+        KeyValueBean bean;
+        long result;
+        if (!query.isEmpty()) {
+            bean = query.get(0);
+            bean.setValue(val);
+            result = mLiteOrm.update(bean, ConflictAlgorithm.Abort);
+        } else {
+            bean = new KeyValueBean(key, val);
+            result = mLiteOrm.insert(bean, ConflictAlgorithm.Ignore);
+        }
+        return result;
+    }
+
+    /**
+     * 获取默认配置
+     *
+     * @param key
+     * @return
+     */
+    public String queryValue(String key) {
+        ArrayList<KeyValueBean> query = mLiteOrm.query(new QueryBuilder<>(KeyValueBean.class)
+                .where("key=?", key)
+                .appendOrderAscBy(BaseBean._ID));
+        if (query != null && !query.isEmpty()) {
+            return query.get(0).getValue();
+        }
+        return "";
+    }
+
 
     /**
      * 存储数据

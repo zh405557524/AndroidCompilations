@@ -1,5 +1,9 @@
 package com.soul.androidcompilptions.rxandretrofi.bean;
 
+import com.litesuits.orm.db.annotation.Column;
+import com.litesuits.orm.db.annotation.PrimaryKey;
+import com.litesuits.orm.db.enums.AssignType;
+
 /**
  * * @author soul
  *
@@ -11,5 +15,22 @@ package com.soul.androidcompilptions.rxandretrofi.bean;
  */
 
 public class BaseBean {
+
+
+    public static final String _ID = "_id";
+
+
+    @PrimaryKey(AssignType.AUTO_INCREMENT)
+    @Column("_id")
+    public long _id;
+
+    public long get_id() {
+        return _id;
+    }
+
+    public void set_id(long _id) {
+        this._id = _id;
+    }
+
     public boolean error;
 }

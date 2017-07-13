@@ -11,5 +11,8 @@
     <color name="function_greenbutton_textcolor_selector">#4cb2b0</color>
     <color name="brightYellow">#ffeb3c</color>
     <color name="theme_primary_darker">#2d1e1b</color>
+    <color name="detail_back">#ebebeb</color>
+    <color name="text_line_color">#ff8522</color>
+    <color name="line_color">#ebebeb</color>
 
 </resources>

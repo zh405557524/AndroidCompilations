@@ -1,14 +1,14 @@
-package com.soul.androidcompilptions.rxandretrofi;
+package com.soul.androidcompilptions.rxandretrofi.ui.meizi;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.bumptech.glide.Glide;
 import com.soul.androidcompilptions.R;
 import com.soul.androidcompilptions.rxandretrofi.entity.MeiZhi;
 import com.soul.androidcompilptions.rxandretrofi.ui.picture.PictureActivity;
+import com.soul.androidcompilptions.rxandretrofi.utils.ImageUtil;
 import com.soul.library.base.BaseAdapter;
 import com.soul.library.widget.RatioImageView;
 import com.zhy.adapter.recyclerview.base.ViewHolder;
@@ -52,10 +52,9 @@ public class MeiZhiPhotoAdapter extends BaseAdapter<MeiZhi> {
     @Override
     protected void convert(ViewHolder holder, MeiZhi meiZhi, int position) {
         RatioImageView imageView = holder.getView(R.id.iv_meiZhi);
-        Glide.with(mContext)
-                .load(meiZhi.url)
-                .centerCrop()
-                .into(imageView);
+
+        ImageUtil.setImageView(imageView, meiZhi.url);
+        
         holder.setText(R.id.tv_des, meiZhi.desc);
         imageView.setOnClickListener(view -> {
             Intent intent = new Intent(mContext, PictureActivity.class);

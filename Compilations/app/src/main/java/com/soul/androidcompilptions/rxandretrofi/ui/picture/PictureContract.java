@@ -1,8 +1,8 @@
 package com.soul.androidcompilptions.rxandretrofi.ui.picture;
 
-import com.soul.androidcompilptions.rxandretrofi.RxRetrofitModel;
 import com.soul.androidcompilptions.rxandretrofi.bean.MeiZhiBean;
 import com.soul.androidcompilptions.rxandretrofi.entity.MeiZhi;
+import com.soul.androidcompilptions.rxandretrofi.ui.meizi.MeiZhiModel;
 import com.soul.library.base.BasePresenter;
 import com.soul.library.mvp.IView;
 
@@ -26,7 +26,7 @@ public interface PictureContract {
         void showMoreData(MeiZhiBean meiZhiBean);
     }
 
-    abstract class Presenter extends BasePresenter<View, RxRetrofitModel> {
+    abstract class Presenter extends BasePresenter<View, MeiZhiModel> {
 
         public abstract void showLocalData(int position);
     }

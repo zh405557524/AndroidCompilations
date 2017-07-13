@@ -1,7 +1,7 @@
 package com.soul.androidcompilptions.rxandretrofi.ui.gan;
 
-import com.soul.androidcompilptions.rxandretrofi.RxRetrofitContract;
 import com.soul.androidcompilptions.rxandretrofi.entity.GanK;
+import com.soul.androidcompilptions.rxandretrofi.ui.meizi.MeiZhiContract;
 import com.soul.library.base.BasePresenter;
 import com.soul.library.mvp.IView;
 
@@ -25,7 +25,7 @@ public interface GanKContract {
     }
 
 
-    abstract class GanKPresenter extends BasePresenter<GanKView, RxRetrofitContract.Model> {
+    abstract class GanKPresenter extends BasePresenter<GanKView, MeiZhiContract.Model> {
         /**
          * 获取干货的数据
          *

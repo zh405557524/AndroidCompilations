@@ -25,6 +25,8 @@ public class AllAndAmbActivity extends BaseActivity {
     /**
      * All操作符根据一个函数对源Observable发射的所有数据进行判断，最终返回的结果就是这个判断结果。
      * 这个函数使用发射的数据作为参数，内部判断所有的数据是否满足我们定义好的判断条件，如果全部都满足则返回true，否则就返回false。
+     * <p>
+     * ---全部为true 返回true 否则为false
      *
      * @return
      */
@@ -42,6 +44,8 @@ public class AllAndAmbActivity extends BaseActivity {
     /**
      * Amb操作符可以将至多9个Observable结合起来，让他们竞争。
      * 哪个Observable首先发射了数据（包括onError和onComplete)就会继续发射这个Observable的数据，其他的Observable所发射的数据都会别丢弃。
+     * <p>
+     * -----最先发射的数据，会发射出去，其他则被丢弃
      *
      * @return
      */

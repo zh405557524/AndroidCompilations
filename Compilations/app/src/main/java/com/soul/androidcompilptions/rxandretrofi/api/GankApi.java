@@ -31,6 +31,4 @@ public interface GankApi {
 
     @GET("data/休息视频/" + DrakeetFactory.meizhiSize + "/{page}")
     Observable<RestVideoBean> getRestVideoData(@Path("page") int page);
-
-
 }

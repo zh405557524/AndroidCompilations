@@ -8,10 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 
-import com.bumptech.glide.Glide;
 import com.soul.androidcompilptions.R;
 import com.soul.androidcompilptions.rxandretrofi.bean.MeiZhiBean;
 import com.soul.androidcompilptions.rxandretrofi.entity.MeiZhi;
+import com.soul.androidcompilptions.rxandretrofi.utils.ImageUtil;
 import com.soul.library.base.BaseRxActivity;
 import com.soul.library.utils.LogUtils;
 import com.soul.library.widget.photoview.PhotoView;
@@ -123,15 +123,11 @@ public class PictureActivity extends BaseRxActivity<PicturePresenter> implements
             //            view.findViewById(R.id.iv_photo);
             PhotoView photoView = new PhotoView(mContext);
             photoView.enable();
-            Glide.with(mContext)
-                    .load(meiZhi.url)
-                    .centerCrop()
-                    .dontAnimate() //淡入淡出
-                    .into(photoView);
+            ImageUtil.setImageView(photoView, meiZhi.url);
             container.addView(photoView);
             photoView.setOnClickListener(view -> {
                 Intent intent = new Intent();
-                intent.putExtra(EXTRA_POSITION, position );
+                intent.putExtra(EXTRA_POSITION, position);
                 setResult(10, intent);
                 finish();
             });

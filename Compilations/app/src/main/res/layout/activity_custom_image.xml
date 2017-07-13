@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.soul.androidcompilptions.customview.customImageview.CustomImageActivity"
-    >
+>
 
     <com.soul.androidcompilptions.customview.customImageview.CustomTitleViw
         android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
         custom:titleText="fsdafdsafdjhkkjka"
         custom:titleTextColor="#ff0000"
         custom:titleTextSize="30sp"
-        >
+    >
 
     </com.soul.androidcompilptions.customview.customImageview.CustomImageView>
 
@@ -40,7 +40,7 @@
         custom:circleWidth="50dp"
         custom:firstColor="#5a9f57"
         custom:secondColor="#af4444"
-        >
+    >
 
     </com.soul.androidcompilptions.customview.customImageview.CustomProgressBar>
 
@@ -58,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"
-        >
+    >
 
         <TextView
             android:layout_width="50dp"
@@ -107,7 +107,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible"
-        >
+    >
 
     </com.soul.androidcompilptions.customview.canvas_study.CanvasDemoView>
 

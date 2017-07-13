@@ -66,11 +66,14 @@ public abstract class BaseFragment<P extends BasePresenter> extends Fragment imp
     // 初始化界面
     protected abstract View initView(ViewGroup container);
 
+
     // 初始化数据
     protected abstract void initData();
 
     // 初始化事件
     protected void initEvent() {
+
+
     }
 
     ;

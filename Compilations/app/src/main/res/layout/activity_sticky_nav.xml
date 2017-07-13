@@ -22,7 +22,7 @@
             android:text="ruanjianjieshao"
             android:textSize="30sp"
             android:textStyle="bold"
-            />
+        />
     </RelativeLayout>
 
     <com.soul.library.widget.SimpleViewPagerIndicator

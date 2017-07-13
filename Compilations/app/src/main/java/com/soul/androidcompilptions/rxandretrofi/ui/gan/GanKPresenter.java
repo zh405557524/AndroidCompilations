@@ -1,8 +1,8 @@
 package com.soul.androidcompilptions.rxandretrofi.ui.gan;
 
-import com.soul.androidcompilptions.rxandretrofi.RxRetrofitModel;
 import com.soul.androidcompilptions.rxandretrofi.bean.GanKBean;
 import com.soul.androidcompilptions.rxandretrofi.entity.GanK;
+import com.soul.androidcompilptions.rxandretrofi.ui.meizi.MeiZhiModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,7 @@ public class GanKPresenter extends GanKContract.GanKPresenter {
     private List<GanK> mGanKList;
 
     public GanKPresenter() {
-        mModel =  new RxRetrofitModel();
+        mModel = new MeiZhiModel();
     }
 
     @Override

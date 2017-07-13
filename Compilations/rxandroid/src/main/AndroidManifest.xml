@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="landscape"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -89,6 +90,33 @@
             </intent-filter>
         </activity>
         <activity android:name=".conditionl_boolean.AllAndAmbActivity"
+                  android:label="@string/title_activity_all_abm"
+                  android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="cn.com.chaoba.rxjavademo.category"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".conditionl_boolean.ContainsActivity"
+                  android:label="@string/title_activity_all_abm"
+                  android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="cn.com.chaoba.rxjavademo.category"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".conditionl_boolean.DefaultIfEmptyActivity"
+                  android:label="@string/title_activity_all_abm"
+                  android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="cn.com.chaoba.rxjavademo.category"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".conditionl_boolean.SequenceEqualActivity"
                   android:label="@string/title_activity_all_abm"
                   android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

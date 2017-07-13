@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x150"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/y640"
+        android:background="@color/white1"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/x40"
+        android:paddingRight="@dimen/x40">
+
+        <ImageView
+            android:id="@+id/iv_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_blank_arrow_chatview"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="fdasfda"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x50"/>
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/common_nav_cancel_nor"/>
+
+
+    </RelativeLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="@dimen/x1"
+          android:background="@color/line_color"
+    />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_audio_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

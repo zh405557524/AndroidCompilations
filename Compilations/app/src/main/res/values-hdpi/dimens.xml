@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-<!-- 480*800 -->
-    <dimen name="tv_width">300dp</dimen>
-</resources>

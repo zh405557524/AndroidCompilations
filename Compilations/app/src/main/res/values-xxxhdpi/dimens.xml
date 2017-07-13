@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <!-- 1440*2560 -->
-
-    <dimen name="tv_width">20dp</dimen>
-
-</resources>

@@ -8,19 +8,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/VisitRemoteService" />
-            <option value="$PROJECT_DIR$/acceptbroadcast" />
             <option value="$PROJECT_DIR$/animal" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bluetoothdemo" />
-            <option value="$PROJECT_DIR$/broadcastreceiverdemo" />
-            <option value="$PROJECT_DIR$/conentprovierdemo" />
             <option value="$PROJECT_DIR$/customviewdemo" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/multimediademo" />
             <option value="$PROJECT_DIR$/mylibrary" />
             <option value="$PROJECT_DIR$/rxandroid" />
-            <option value="$PROJECT_DIR$/servicedemo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

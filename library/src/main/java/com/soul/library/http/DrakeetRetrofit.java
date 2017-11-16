@@ -3,6 +3,7 @@ package com.soul.library.http;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.soul.library.BaseApplication;
+import com.soul.library.https.HttpsUtils;
 import com.soul.library.utils.NetworkUtil;
 
 import java.io.IOException;
@@ -47,10 +48,12 @@ public class DrakeetRetrofit {
         httpClient.addInterceptor(logging);
         httpClient.addInterceptor(addCacheInterceptor());
 
+        //https
+        HttpsUtils.SSLParams sslParams = HttpsUtils.getSslSocketFactory(null, null, null);
+        httpClient.sslSocketFactory(sslParams.sSLSocketFactory, sslParams.trustManager);
 
         httpClient.connectTimeout(12, TimeUnit.SECONDS);
         OkHttpClient client = httpClient.build();
-
         Retrofit.Builder builder = new Retrofit.Builder();
         builder.baseUrl(BaseUrl)
                 .client(client)
@@ -134,5 +137,4 @@ public class DrakeetRetrofit {
         };
         return addQueryParameterInterceptor;
     }
-
 }

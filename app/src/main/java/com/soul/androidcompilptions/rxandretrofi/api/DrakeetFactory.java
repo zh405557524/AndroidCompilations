@@ -19,6 +19,7 @@ public class DrakeetFactory {
     public static final int meizhiSize = 10;
     private static BadBoyApi sBadBoyApi;
     private static BadBoyApi sBadBoyResourceApi;
+    private static TextAPi sTextResourceApi;
 
     public static GankApi getGankIOSingleton() {
 
@@ -47,6 +48,16 @@ public class DrakeetFactory {
                 sBadBoyResourceApi = new DrakeetRetrofit(ServerManager.SERVER_BAD_BOY_RESOURCE, DrakeetRetrofit.addQueryParameterInterceptor()).mGankRest.create(BadBoyApi.class);
             }
             return sBadBoyResourceApi;
+        }
+    }
+
+    public static TextAPi getTextHttpsResource() {
+
+        synchronized (monitor) {
+            if (sTextResourceApi == null) {
+                sTextResourceApi = new DrakeetRetrofit(ServerManager.SERVER_TEXT_RESOURCE, DrakeetRetrofit.addQueryParameterInterceptor()).mGankRest.create(TextAPi.class);
+            }
+            return sTextResourceApi;
         }
     }
 

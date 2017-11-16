@@ -231,7 +231,7 @@ public class PathView extends View {
         //        super.onDraw(canvas);
 
         drawCoordinateSystem(canvas);
-        canvas.translate(mScreenWidth / 2, mScreenHeight / 2);
+//        canvas.translate(mScreenWidth / 2, mScreenHeight / 2);
         Path path = null;
 
         /**------------------------------第一组 lineTo,moveTo,setLastPoint,close--------------------------------*/
@@ -278,7 +278,7 @@ public class PathView extends View {
 
         /**------------------------------第四组 贝塞尔曲线--------------------------------*/
         //绘制贝赛尔曲线
-        //        bezier(canvas);
+        bezier(canvas);
         //用贝塞尔曲线绘制心
         //        heartBezier(canvas);
 

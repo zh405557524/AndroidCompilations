@@ -57,6 +57,7 @@ public class MainActivity extends ListActivity {
         putActivityName(myData, new Intent(MainActivity.this, CanvasStudyActivity.class), "Canvas的用法");
         putActivityName(myData, new Intent(MainActivity.this, AndroidBasedActivity.class), " AndroidBased的用法");
         putActivityName(myData, new Intent(MainActivity.this, RxRetrofitActivity.class), " RxRetrofit的用法");
+        putActivityName(myData, new Intent(MainActivity.this, HttpsTextActivity.class), " Https的用法");
         return myData;
     }
 
@@ -75,4 +76,6 @@ public class MainActivity extends ListActivity {
         Intent intent = (Intent) map.get("intent");
         startActivity(intent);
     }
+
+
 }

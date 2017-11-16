@@ -17,6 +17,11 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity
             android:name=".customview.sticky.StickyNavActivity"
@@ -61,13 +66,7 @@
             android:name=".rxandretrofi.RxRetrofitActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait"
-
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity
             android:name=".rxandretrofi.ui.gan.GanKActivity"
@@ -114,15 +113,19 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".rxandretrofi.ui.huai.cache.MyCacheActivity"
-                  android:configChanges="orientation|keyboardHidden"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        >
+        <activity
+            android:name=".rxandretrofi.ui.huai.cache.MyCacheActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".rxandretrofi.ui.huai.cache.MyCacheActivity2"
-                  android:configChanges="orientation|keyboardHidden"
-                  android:screenOrientation="portrait"
+        <activity
+            android:name=".rxandretrofi.ui.huai.cache.MyCacheActivity2"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".HttpsTextActivity"
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         >
         </activity>

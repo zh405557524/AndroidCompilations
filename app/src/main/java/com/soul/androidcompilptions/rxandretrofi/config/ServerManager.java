@@ -22,6 +22,8 @@ public class ServerManager {
             = "http://sindar.huainanhai.com/";   //坏男孩网址地址
     public static final String SERVER_BAD_BOY_RESOURCE
             = "http://narya.huainanhai.com/";   //坏男孩资源网址地址
+    public static final String SERVER_TEXT_RESOURCE
+            = "https://www.baidu.com";
 
 
     public static final int COUNT = 10;  //分页取数据条数

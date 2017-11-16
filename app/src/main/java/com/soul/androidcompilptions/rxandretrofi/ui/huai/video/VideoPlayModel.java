@@ -85,6 +85,11 @@ public class VideoPlayModel implements VideoPlayContract.Model {
         DBHelper.getInstance().insertOrUpdateValue(VideoBean.class.getName() + (course_id + ""), s);
     }
 
+    @Override
+    public void saveVideoData(VideoBean videoBean, String course_name) {
+
+    }
+
     /**
      * 视频地址
      *
@@ -118,6 +123,11 @@ public class VideoPlayModel implements VideoPlayContract.Model {
         VideoBean o = gson.fromJson(jsonString, new TypeToken<VideoBean>() {
         }.getType());
         return o;
+    }
+
+    @Override
+    public VideoBean loadVideoLocalData(String courseName) {
+        return null;
     }
 
     @Override

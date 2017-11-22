@@ -17,6 +17,7 @@ import com.soul.androidcompilptions.customview.popupwindow.PopupWindowDemo;
 import com.soul.androidcompilptions.customview.sticky.StickyNavActivity;
 import com.soul.androidcompilptions.customview.widget.WidgetDemoActivity;
 import com.soul.androidcompilptions.rxandretrofi.RxRetrofitActivity;
+import com.soul.androidcompilptions.text.HttpsTextActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;

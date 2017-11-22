@@ -18,7 +18,6 @@ import rx.Subscriber;
 
 public class MyCacheModel implements MyCacheContract.Model {
 
-
     @Override
     public Observable<List<DownloadAudioBean>> loadCacheData() {
 
@@ -31,29 +30,29 @@ public class MyCacheModel implements MyCacheContract.Model {
         });
     }
 
-    @Override
-    public Observable<List<List<DownloadAudioBean>>> sortCacheData(List<DownloadAudioBean> list) {
-        List<List<DownloadAudioBean>> lists = new ArrayList<>();
-        Collections.sort(list);
+            @Override
+            public Observable<List<List<DownloadAudioBean>>> sortCacheData(List<DownloadAudioBean> list) {
+                List<List<DownloadAudioBean>> lists = new ArrayList<>();
+                Collections.sort(list);
 
-        String nameType = "";
-        List<DownloadAudioBean> tempList = null;
-        for (int x = 0; x < list.size(); x++) {
-            DownloadAudioBean downloadAudioBean = list.get(x);
-            String video_name = downloadAudioBean.getVideo_name();
-            if (!nameType.equals(video_name)) {
+                String nameType = "";
+                List<DownloadAudioBean> tempList = null;
+                for (int x = 0; x < list.size(); x++) {
+                    DownloadAudioBean downloadAudioBean = list.get(x);
+                    String video_name = downloadAudioBean.getVideo_name();
+                    if (!nameType.equals(video_name)) {
+                        if (tempList != null) {
+                            lists.add(tempList);
+                        }
+                        tempList = new ArrayList<>();
+                        tempList.add(downloadAudioBean);
+                        nameType = video_name;
+                    } else {
+                        tempList.add(downloadAudioBean);
+                    }
+                }
                 if (tempList != null) {
                     lists.add(tempList);
-                }
-                tempList = new ArrayList<>();
-                tempList.add(downloadAudioBean);
-                nameType = video_name;
-            } else {
-                tempList.add(downloadAudioBean);
-            }
-        }
-        if (tempList != null) {
-            lists.add(tempList);
         }
         return Observable.just(lists);
     }

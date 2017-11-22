@@ -23,7 +23,7 @@ public class ServerManager {
     public static final String SERVER_BAD_BOY_RESOURCE
             = "http://narya.huainanhai.com/";   //坏男孩资源网址地址
     public static final String SERVER_TEXT_RESOURCE
-            = "https://www.baidu.com";
+            = "https://opensdk.hongfans.cn";
 
 
     public static final int COUNT = 10;  //分页取数据条数

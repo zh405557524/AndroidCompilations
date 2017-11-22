@@ -21,6 +21,11 @@ public class DrakeetFactory {
     private static BadBoyApi sBadBoyResourceApi;
     private static TextAPi sTextResourceApi;
 
+    /**
+     * 获取资讯地址
+     *
+     * @return
+     */
     public static GankApi getGankIOSingleton() {
 
         synchronized (monitor) {
@@ -31,6 +36,11 @@ public class DrakeetFactory {
         }
     }
 
+    /**
+     * 坏男孩
+     *
+     * @return
+     */
     public static BadBoyApi getBadBoy() {
 
         synchronized (monitor) {
@@ -41,6 +51,11 @@ public class DrakeetFactory {
         }
     }
 
+    /**
+     * 坏男孩资源
+     *
+     * @return
+     */
     public static BadBoyApi getBadBoyResource() {
 
         synchronized (monitor) {

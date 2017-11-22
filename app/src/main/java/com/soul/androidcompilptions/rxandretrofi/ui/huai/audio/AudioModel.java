@@ -5,6 +5,7 @@ import com.google.gson.reflect.TypeToken;
 import com.soul.androidcompilptions.rxandretrofi.DBHelper;
 import com.soul.androidcompilptions.rxandretrofi.api.DrakeetFactory;
 import com.soul.androidcompilptions.rxandretrofi.bean.AudioBean;
+import com.soul.androidcompilptions.rxandretrofi.ui.huai.Constants;
 
 import rx.Observable;
 
@@ -20,12 +21,12 @@ public class AudioModel implements AudioContract.Model {
     public Observable<AudioBean> loadVoiceData(String date) {
         return DrakeetFactory.getBadBoy().getAudioData(
                 date,
-                "355457084869117",
-                "1499050382581deecae55de47b434791",
-                "3355169",
-                "4.2.21",
-                ".other",
-                ".1c92f2179c86cbdf22856444822b0c87"
+                Constants.PHONE_SN,
+                Constants.SESSION_ID,
+                Constants.LOGIN_USER_ID,
+                Constants.VERSION,
+                Constants.APP_CHANNEL,
+                Constants.PCID
         );
     }
 

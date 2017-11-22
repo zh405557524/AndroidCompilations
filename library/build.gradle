@@ -36,6 +36,8 @@ android {
 
 }
 
+
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -67,4 +69,5 @@ dependencies {
     compile 'com.pnikosis:materialish-progress:1.7'
     compile 'com.liulishuo.filedownloader:library:1.5.9'
     compile 'com.jungle.mediaplayer:android-jungle-mediaplayer:1.0'
+
 }

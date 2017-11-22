@@ -87,9 +87,9 @@ public class DownloadActivity extends BaseRxActivity<DetailContract.DetailPresen
     private void setAdapter(List<DownloadAudioBean> downloadAudioBeans) {
 
         //正在下载
-//下载完成
-//暂停下载
-//暂停下载
+        //下载完成
+        //暂停下载
+        //暂停下载
         if (mBaseAdapter == null) {
             mBaseAdapter = new BaseAdapter<DownloadAudioBean>(mContext, R.layout.itme_down_load, downloadAudioBeans) {
 

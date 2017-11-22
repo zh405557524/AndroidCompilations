@@ -19,5 +19,5 @@ public interface TextAPi {
      */
 
     @GET("otn")
-    Observable<Object> getTextData();
+    Observable<String> getTextData();
 }

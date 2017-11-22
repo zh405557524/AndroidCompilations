@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.soul.customviewdemo.test.CheckView;
-import com.soul.customviewdemo.test.voice.VoiceAnimalView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -31,8 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initData() {
-        VoiceAnimalView voiceAnimalView = new VoiceAnimalView(MainActivity.this);
-        mRootView.addView(voiceAnimalView);
+//        VoiceAnimalView voiceAnimalView = new VoiceAnimalView(MainActivity.this);
+//        mRootView.addView(voiceAnimalView);
 
     }
 

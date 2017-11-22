@@ -20,17 +20,32 @@ import java.util.concurrent.Executors;
 
 public class ImageLoader {
 
+    public static ImageLoader sImageLoader;
     //内存缓存
     private ImageCache mImageCache = new MemoryCache();
     //SD卡缓存
     DiskCache mDiskCache = new DiskCache();
-    
+
     DoubleCache mDoubleCache = new DoubleCache();
 
     ExecutorService mExecutorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
     public ImageLoader() {
 
+    }
+
+    /**
+     * @return
+     */
+    public static ImageLoader getInstants() {
+        if (sImageLoader == null) {
+            synchronized (ImageLoader.class) {
+                if (sImageLoader == null) {
+                    sImageLoader = new ImageLoader();
+                }
+            }
+        }
+        return sImageLoader;
     }
 
     public void setImageCache(ImageCache imageCache) {
@@ -64,7 +79,6 @@ public class ImageLoader {
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             bitmap = BitmapFactory.decodeStream(urlConnection.getInputStream());
             urlConnection.disconnect();
-
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {

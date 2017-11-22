@@ -1,10 +1,11 @@
-package com.soul.androidcompilptions;
+package com.soul.androidcompilptions.text;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.soul.androidcompilptions.R;
 import com.soul.androidcompilptions.rxandretrofi.api.DrakeetFactory;
 
 import rx.Subscriber;

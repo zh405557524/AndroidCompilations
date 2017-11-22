@@ -20,6 +20,7 @@ import com.soul.androidcompilptions.rxandretrofi.config.ActionConstant;
 import com.soul.library.base.BaseAdapter;
 import com.soul.library.base.BaseRxActivity;
 import com.soul.library.utils.LogUtils;
+import com.soul.library.utils.StringUtils;
 import com.soul.library.utils.ThreadFactory;
 import com.soul.library.utils.UIUtils;
 import com.soul.library.widget.photoview.PhotoView;
@@ -187,8 +188,16 @@ public class DetailActivity extends BaseRxActivity<DetailPresenter> implements D
             mTimerTask = new TimerTask() {
                 @Override
                 public void run() {
-                    playBar.setMax(mMediaPlayer.getDuration());
-                    playBar.setProgress(mMediaPlayer.getCurrentPosition());
+                    UIUtils.getHandler().post(new Runnable() {
+                        @Override
+                        public void run() {
+                            playBar.setMax(mMediaPlayer.getDuration());
+                            playBar.setProgress(mMediaPlayer.getCurrentPosition());
+                            tvPlayed.setText(StringUtils.formatTime(mMediaPlayer.getCurrentPosition() / 1000));
+                            tvDuration.setText(StringUtils.formatTime(mMediaPlayer.getDuration() / 1000));
+                        }
+                    });
+
                 }
             };
             mTimer.schedule(mTimerTask, 0, 500);
@@ -199,8 +208,8 @@ public class DetailActivity extends BaseRxActivity<DetailPresenter> implements D
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    protected void onStop() {
+        super.onStop();
         if (mTimer != null) {
             mTimer.cancel();
         }
@@ -209,5 +218,11 @@ public class DetailActivity extends BaseRxActivity<DetailPresenter> implements D
             mMediaPlayer.release();
             mMediaPlayer = null;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
     }
 }

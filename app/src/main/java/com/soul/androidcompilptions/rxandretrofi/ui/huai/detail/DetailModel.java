@@ -60,12 +60,12 @@ public class DetailModel implements DetailContract.Model {
                 "broadcast_history",
                 "",
                 "0",
-                "355457084869117",
-                "1499050382581deecae55de47b434791",
-                "3355169",
-                "4.2.21",
-                ".other",
-                ".1c92f2179c86cbdf22856444822b0c87"
+                Constants.PHONE_SN,
+                Constants.SESSION_ID,
+                Constants.LOGIN_USER_ID,
+                Constants.VERSION,
+                Constants.APP_CHANNEL,
+                Constants.PCID
         );
     }
 

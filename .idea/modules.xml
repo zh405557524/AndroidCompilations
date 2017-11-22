@@ -3,26 +3,35 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://G:\AndroidCompilations.git\trunk\AndroidCompilations.iml" filepath="G:\AndroidCompilations.git\trunk\AndroidCompilations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidCompilations.git.iml" filepath="$PROJECT_DIR$/AndroidCompilations.git.iml" />
       <module fileurl="file://G:\AndroidCompilations.git\trunk\VisitRemoteService\VisitRemoteService.iml" filepath="G:\AndroidCompilations.git\trunk\VisitRemoteService\VisitRemoteService.iml" />
       <module fileurl="file://G:\AndroidCompilations.git\trunk\acceptbroadcast\acceptbroadcast.iml" filepath="G:\AndroidCompilations.git\trunk\acceptbroadcast\acceptbroadcast.iml" />
       <module fileurl="file://$PROJECT_DIR$/animal/animal.iml" filepath="$PROJECT_DIR$/animal/animal.iml" />
+      <module fileurl="file://G:\AndroidCompilations.git\animal\animal.iml" filepath="G:\AndroidCompilations.git\animal\animal.iml" />
       <module fileurl="file://G:\AndroidCompilations.git\trunk\animal\animal.iml" filepath="G:\AndroidCompilations.git\trunk\animal\animal.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://G:\AndroidCompilations.git\trunk\app\app.iml" filepath="G:\AndroidCompilations.git\trunk\app\app.iml" />
+      <module fileurl="file://G:\AndroidCompilations.git\app\app.iml" filepath="G:\AndroidCompilations.git\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/bluetoothdemo/bluetoothdemo.iml" filepath="$PROJECT_DIR$/bluetoothdemo/bluetoothdemo.iml" />
       <module fileurl="file://G:\AndroidCompilations.git\trunk\bluetoothdemo\bluetoothdemo.iml" filepath="G:\AndroidCompilations.git\trunk\bluetoothdemo\bluetoothdemo.iml" />
+      <module fileurl="file://G:\AndroidCompilations.git\bluetoothdemo\bluetoothdemo.iml" filepath="G:\AndroidCompilations.git\bluetoothdemo\bluetoothdemo.iml" />
       <module fileurl="file://G:\AndroidCompilations.git\trunk\broadcastreceiverdemo\broadcastreceiverdemo.iml" filepath="G:\AndroidCompilations.git\trunk\broadcastreceiverdemo\broadcastreceiverdemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/compilations.iml" filepath="$PROJECT_DIR$/compilations.iml" />
+      <module fileurl="file://G:\AndroidCompilations.git\compilations.iml" filepath="G:\AndroidCompilations.git\compilations.iml" />
       <module fileurl="file://G:\AndroidCompilations.git\trunk\conentprovierdemo\conentprovierdemo.iml" filepath="G:\AndroidCompilations.git\trunk\conentprovierdemo\conentprovierdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/customviewdemo/customviewdemo.iml" filepath="$PROJECT_DIR$/customviewdemo/customviewdemo.iml" />
       <module fileurl="file://G:\AndroidCompilations.git\trunk\customviewdemo\customviewdemo.iml" filepath="G:\AndroidCompilations.git\trunk\customviewdemo\customviewdemo.iml" />
+      <module fileurl="file://G:\AndroidCompilations.git\customviewdemo\customviewdemo.iml" filepath="G:\AndroidCompilations.git\customviewdemo\customviewdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://G:\AndroidCompilations.git\library\library.iml" filepath="G:\AndroidCompilations.git\library\library.iml" />
       <module fileurl="file://G:\AndroidCompilations.git\trunk\library\library.iml" filepath="G:\AndroidCompilations.git\trunk\library\library.iml" />
       <module fileurl="file://$PROJECT_DIR$/multimediademo/multimediademo.iml" filepath="$PROJECT_DIR$/multimediademo/multimediademo.iml" />
+      <module fileurl="file://G:\AndroidCompilations.git\multimediademo\multimediademo.iml" filepath="G:\AndroidCompilations.git\multimediademo\multimediademo.iml" />
       <module fileurl="file://G:\AndroidCompilations.git\trunk\multimediademo\multimediademo.iml" filepath="G:\AndroidCompilations.git\trunk\multimediademo\multimediademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mylibrary/mylibrary.iml" filepath="$PROJECT_DIR$/mylibrary/mylibrary.iml" />
+      <module fileurl="file://G:\AndroidCompilations.git\mylibrary\mylibrary.iml" filepath="G:\AndroidCompilations.git\mylibrary\mylibrary.iml" />
       <module fileurl="file://G:\AndroidCompilations.git\trunk\mylibrary\mylibrary.iml" filepath="G:\AndroidCompilations.git\trunk\mylibrary\mylibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxandroid/rxandroid.iml" filepath="$PROJECT_DIR$/rxandroid/rxandroid.iml" />
+      <module fileurl="file://G:\AndroidCompilations.git\rxandroid\rxandroid.iml" filepath="G:\AndroidCompilations.git\rxandroid\rxandroid.iml" />
       <module fileurl="file://G:\AndroidCompilations.git\trunk\rxandroid\rxandroid.iml" filepath="G:\AndroidCompilations.git\trunk\rxandroid\rxandroid.iml" />
       <module fileurl="file://G:\AndroidCompilations.git\trunk\servicedemo\servicedemo.iml" filepath="G:\AndroidCompilations.git\trunk\servicedemo\servicedemo.iml" />
       <module fileurl="file://G:\compilations\trunk.iml" filepath="G:\compilations\trunk.iml" />

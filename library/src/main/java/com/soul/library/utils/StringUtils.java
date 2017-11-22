@@ -1,5 +1,7 @@
 package com.soul.library.utils;
 
+import java.util.Locale;
+
 /**
  * <pre>
  *     author: Blankj
@@ -65,6 +67,9 @@ public class StringUtils {
         return false;
     }
 
+    public static String formatTime(int time) {
+        return String.format(Locale.CHINESE, "%02d:%02d", time / 60, time % 60);
+    }
     /**
      * 判断两字符串忽略大小写是否相等
      *

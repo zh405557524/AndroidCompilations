@@ -1,12 +1,10 @@
 package com.soul.androidcompilptions.rxandretrofi.ui.gan;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,8 +24,8 @@ public class GanKFragment extends BaseFragment<GanKPresenter> implements GanKCon
     private static final String ARG_MONTH = "month";
     private static final String ARG_DAY = "day";
     private LayoutInflater mInflater;
-    @BindView(R.id.toolbar)
-    public Toolbar mToolbar;
+//    @BindView(R.id.toolbar)
+//    public Toolbar mToolbar;
     @BindView(R.id.rv_recyclerView)
     public RecyclerView mRecyclerView;
     @BindView(R.id.ab_appBarLayout)
@@ -74,10 +72,10 @@ public class GanKFragment extends BaseFragment<GanKPresenter> implements GanKCon
     }
 
     private void setToolBar(String date) {
-        mToolbar.setTitle(date);
-        mToolbar.setTitleTextColor(Color.WHITE);
-        mToolbar.setNavigationIcon(R.drawable.return_bg_selector);
-        mToolbar.setNavigationOnClickListener(view -> finish());
+//        mToolbar.setTitle(date);
+//        mToolbar.setTitleTextColor(Color.WHITE);
+//        mToolbar.setNavigationIcon(R.drawable.return_bg_selector);
+//        mToolbar.setNavigationOnClickListener(view -> finish());
     }
 
     @Override

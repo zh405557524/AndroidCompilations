@@ -3,6 +3,7 @@ package com.soul.rxandroid;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -23,12 +24,25 @@ public class BaseActivity extends AppCompatActivity {
         mRButton = (Button) findViewById(R.id.right);
         mResultView = (TextView) findViewById(R.id.result);
         TAG = getLocalClassName();
+        mLButton.setOnClickListener(this::onClickLeft);
+        mRButton.setOnClickListener(this::onClickRight);
     }
+
 
     protected void log(Object s) {
         Log.d(TAG, String.valueOf(s));
         Observable.just(s).observeOn(AndroidSchedulers.mainThread()).subscribe(i -> {
             mResultView.setText(mResultView.getText() + "\n" + i);
         });
+    }
+
+
+
+    protected void onClickLeft(View view) {
+
+    }
+
+    protected void onClickRight(View view) {
+
     }
 }

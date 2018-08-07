@@ -31,11 +31,8 @@ public class GanKPresenter extends GanKContract.GanKPresenter {
     @Override
     public void loadGanKData(int year, int month, int day) {
         mModel.loadGanKData(year, month, day)
-
                 .map(data -> data.results)
-
                 .map(this::addAllResults)
-
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<List<GanK>>() {
@@ -60,15 +57,12 @@ public class GanKPresenter extends GanKContract.GanKPresenter {
 
 
         mModel.loadGanKData(year, month, day)
-
                 .map(data -> data.results)
-
                 .map(this::addAllResults)
-
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(data ->
-                                mView.loadDataSucceed(data),
+                         mView.loadDataSucceed(data),
                         Throwable::printStackTrace);
     }
 

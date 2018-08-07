@@ -7,11 +7,11 @@ package com.soul.androidcompilptions.rxandretrofi.ui.huai;
  */
 
 public class Constants {
-    public final static String PHONE_SN = "355457084869117";
-    public final static String SESSION_ID = "1511315419471156b81d5ea31c055791";
+    public final static String PHONE_SN = "30a06d22dfdab1e5c83827dcdd72de03";
+    public final static String SESSION_ID = "1532600807981578db116de21f196891";
     public final static String LOGIN_USER_ID = "3355169";
-    public final static String VERSION = "4.2.50";
-    public final static String APP_CHANNEL = "360";
-    public final static String PCID = "a925afee8e8e01cd8347631a3ced2be4";
+    public final static String VERSION = "2.2.7";
+    public final static String APP_CHANNEL = "yingyongbao";
+    public final static String PCID = "34c85ded508291d6bd65a6a5e8f2cbd5";
 
 }

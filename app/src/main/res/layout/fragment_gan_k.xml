@@ -19,16 +19,16 @@
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
-            <FrameLayout android:layout_width="match_parent"
-                         android:layout_height="match_parent"
-                         app:layout_collapseMode="parallax">
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layout_collapseMode="parallax">
                 <ImageView
                     android:id="@+id/main.backdrop"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/video_bg"
                     android:fitsSystemWindows="true"
                     android:scaleType="centerCrop"
-                    android:background="@drawable/video_bg"
                 />
 
                 <ImageView
@@ -37,16 +37,33 @@
                     android:layout_gravity="center"
                     android:src="@drawable/ic_play"/>
 
-            </FrameLayout>
+            </RelativeLayout>
 
 
-            <android.support.v7.widget.Toolbar
+            <LinearLayout
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+                app:layout_collapseParallaxMultiplier="0.5"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="范德萨"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="fsdafdfdas"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal"
+                app:layout_collapseMode="pin"
+                app:layout_collapseParallaxMultiplier="0.5"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 

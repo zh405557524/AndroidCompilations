@@ -7,6 +7,9 @@ import com.soul.rxandroid.BaseActivity;
 import rx.Observable;
 
 
+/**
+ * 聚合
+ */
 public class ConcatAndCountActivity extends BaseActivity {
 
     @Override
@@ -31,7 +34,7 @@ public class ConcatAndCountActivity extends BaseActivity {
     }
 
     /**
-     * 将数据集合在一起
+     * 发射的数据的个数
      *
      * @return
      */

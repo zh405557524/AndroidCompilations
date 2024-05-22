@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/androidcontent" />
             <option value="$PROJECT_DIR$/animal" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bluetoothdemo" />
             <option value="$PROJECT_DIR$/customviewdemo" />
+            <option value="$PROJECT_DIR$/frame" />
+            <option value="$PROJECT_DIR$/javalib" />
+            <option value="$PROJECT_DIR$/kotlin" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/multimediademo" />
             <option value="$PROJECT_DIR$/mylibrary" />
+            <option value="$PROJECT_DIR$/nativelibrary" />
             <option value="$PROJECT_DIR$/rxandroid" />
           </set>
         </option>
-        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="resolveExternalAnnotations" value="false" />
       </GradleProjectSettings>
     </option>
   </component>

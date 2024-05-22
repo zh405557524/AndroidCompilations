@@ -1,0 +1,29 @@
+{
+  "buildFiles": [
+    "E:\\work\\code\\zhuming\\AndroidCompilations\\nativelibrary\\src\\main\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "D:\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "E:\\work\\code\\zhuming\\AndroidCompilations\\nativelibrary\\.cxx\\Debug\\6ukk654f\\armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "D:\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "E:\\work\\code\\zhuming\\AndroidCompilations\\nativelibrary\\.cxx\\Debug\\6ukk654f\\armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "Lib::@6890427a1f51a3e7e1df": {
+      "artifactName": "Lib",
+      "abi": "armeabi-v7a",
+      "output": "E:\\work\\code\\zhuming\\AndroidCompilations\\nativelibrary\\src\\main\\libs\\armeabi-v7a\\libLib.so",
+      "runtimeFiles": [
+        "E:\\work\\code\\zhuming\\AndroidCompilations\\nativelibrary\\src\\main\\jni\\thirdparty\\cutils\\lib\\libcutils.so"
+      ]
+    }
+  }
+}

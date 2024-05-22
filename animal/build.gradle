@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -28,15 +27,14 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    testCompile 'junit:junit:4.12'
-    compile project(':mylibrary')
-    apt 'com.jakewharton:butterknife-compiler:8.4.0'
-    compile 'com.jakewharton:butterknife:8.4.0'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.android.support:support-v4:25.3.1'
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    testImplementation 'junit:junit:4.12'
+    implementation project(':mylibrary')
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.android.support:support-v4:25.3.1'
 }

@@ -1,0 +1,22 @@
+[
+{
+  "directory": "E:/work/code/zhuming/AndroidCompilations/nativelibrary/.cxx/Debug/6ukk654f/armeabi-v7a",
+  "command": "D:\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=armv7-none-linux-androideabi16 --sysroot=D:/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DLib_EXPORTS -IE:/work/code/zhuming/AndroidCompilations/nativelibrary/src/main/./jni/src/udp -IE:/work/code/zhuming/AndroidCompilations/nativelibrary/src/main/./jni/thirdparty/cutils/include -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -fexceptions -g  -fno-limit-debug-info -fPIC -DNATIVE_CLIENT_VERSION_INFO=\\\"\\\" -o CMakeFiles\\Lib.dir\\jni\\Lib.c.o -c E:\\work\\code\\zhuming\\AndroidCompilations\\nativelibrary\\src\\main\\jni\\Lib.c",
+  "file": "E:\\work\\code\\zhuming\\AndroidCompilations\\nativelibrary\\src\\main\\jni\\Lib.c"
+},
+{
+  "directory": "E:/work/code/zhuming/AndroidCompilations/nativelibrary/.cxx/Debug/6ukk654f/armeabi-v7a",
+  "command": "D:\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi16 --sysroot=D:/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DLib_EXPORTS -IE:/work/code/zhuming/AndroidCompilations/nativelibrary/src/main/./jni/src/udp -IE:/work/code/zhuming/AndroidCompilations/nativelibrary/src/main/./jni/thirdparty/cutils/include -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -g  -fno-limit-debug-info -fPIC -DNATIVE_CLIENT_VERSION_INFO=\\\"\\\" -o CMakeFiles\\Lib.dir\\jni\\src\\demo.cpp.o -c E:\\work\\code\\zhuming\\AndroidCompilations\\nativelibrary\\src\\main\\jni\\src\\demo.cpp",
+  "file": "E:\\work\\code\\zhuming\\AndroidCompilations\\nativelibrary\\src\\main\\jni\\src\\demo.cpp"
+},
+{
+  "directory": "E:/work/code/zhuming/AndroidCompilations/nativelibrary/.cxx/Debug/6ukk654f/armeabi-v7a",
+  "command": "D:\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi16 --sysroot=D:/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DLib_EXPORTS -IE:/work/code/zhuming/AndroidCompilations/nativelibrary/src/main/./jni/src/udp -IE:/work/code/zhuming/AndroidCompilations/nativelibrary/src/main/./jni/thirdparty/cutils/include -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -g  -fno-limit-debug-info -fPIC -DNATIVE_CLIENT_VERSION_INFO=\\\"\\\" -o CMakeFiles\\Lib.dir\\jni\\src\\udp\\client.cpp.o -c E:\\work\\code\\zhuming\\AndroidCompilations\\nativelibrary\\src\\main\\jni\\src\\udp\\client.cpp",
+  "file": "E:\\work\\code\\zhuming\\AndroidCompilations\\nativelibrary\\src\\main\\jni\\src\\udp\\client.cpp"
+},
+{
+  "directory": "E:/work/code/zhuming/AndroidCompilations/nativelibrary/.cxx/Debug/6ukk654f/armeabi-v7a",
+  "command": "D:\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi16 --sysroot=D:/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DLib_EXPORTS -IE:/work/code/zhuming/AndroidCompilations/nativelibrary/src/main/./jni/src/udp -IE:/work/code/zhuming/AndroidCompilations/nativelibrary/src/main/./jni/thirdparty/cutils/include -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -g  -fno-limit-debug-info -fPIC -DNATIVE_CLIENT_VERSION_INFO=\\\"\\\" -o CMakeFiles\\Lib.dir\\jni\\src\\udp\\server.cpp.o -c E:\\work\\code\\zhuming\\AndroidCompilations\\nativelibrary\\src\\main\\jni\\src\\udp\\server.cpp",
+  "file": "E:\\work\\code\\zhuming\\AndroidCompilations\\nativelibrary\\src\\main\\jni\\src\\udp\\server.cpp"
+}
+]

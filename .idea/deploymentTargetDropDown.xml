@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="deploymentTargetDropDown">
+    <value>
+      <entry key="androidcontent">
+        <State />
+      </entry>
+      <entry key="animal">
+        <State />
+      </entry>
+      <entry key="app">
+        <State />
+      </entry>
+      <entry key="bluetoothdemo">
+        <State />
+      </entry>
+      <entry key="customviewdemo">
+        <State />
+      </entry>
+      <entry key="kotlin">
+        <State />
+      </entry>
+      <entry key="multimediademo">
+        <State />
+      </entry>
+      <entry key="rxandroid">
+        <State />
+      </entry>
+    </value>
+  </component>
+</project>

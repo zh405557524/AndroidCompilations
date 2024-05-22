@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <declare-styleable name="DragBubbleView">
+        <attr name="bubble_radius" format="dimension"/>
+        <attr name="bubble_color" format="color"/>
+        <attr name="bubble_text" format="string"/>
+        <attr name="bubble_textSize" format="dimension"/>
+        <attr name="bubble_textColor" format="color"/>
+    </declare-styleable>
+
+
+    <style name="fullScreen" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorTheme</item>
+        <item name="colorPrimaryDark">@color/colorTheme</item>
+        <item name="colorAccent">@color/colorTheme</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/colorTransparent</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+</resources>
